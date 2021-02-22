@@ -1,0 +1,50 @@
+import sys
+from termcolor import colored
+
+#--------------------------------------------
+## configuracoes das mensagens
+
+def leiaInt(msg):
+    while True:
+        try:
+            n = int(input(msg))
+        except (ValueError, TypeError):
+            print(colored('ERRO: Por favor, digite um número inteiro válido.','red'))
+            continue
+        except (KeyboardInterrupt):
+            print(colored('Usuário preferiu não digitar esse número.','red'))
+            return 0
+        else:
+            return n
+
+def leia_opcao():
+    print(colored('ERRO! Digite uma opção válida!','magenta'))
+
+#--------------------------------------------
+#('Configuracoes do menu')
+
+def linha(tam = 42):
+    return '-' * tam
+
+def cabecalho_sup (txt):
+    print(linha())
+    print(txt.center(55))
+    print(linha())
+
+def cabecalho_inf (txt):
+    print(linha())
+    print(txt.center(50))
+
+def menu(lista):
+    cabecalho_sup(colored('MENU PRINCIPAL','cyan',attrs=['bold']))
+    c = 1
+    for item in lista:
+        print(f'{c} - {item}')
+        c += 1
+    cabecalho_inf(colored('Escolha uma Opção','green'))
+    print(linha())
+    opc = leiaInt("\nSua Opção: ")
+    return opc
+
+#cabecalho_sup(colored('MENU PRINCIPAL','cyan',attrs=['bold']))
+#cabecalho_sup('MENU PRINCIPAL')

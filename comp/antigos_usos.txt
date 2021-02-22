@@ -1,0 +1,34 @@
+##--------------------------------------------------
+#link_01 - voltar ao menu
+
+from lib.aplicacao_menu import *
+
+def service_func():
+    print ('service func')
+
+if __name__ == '__main__':
+    # service.py executed as script
+    # do something
+    service_func()
+    aplicacao_menu.some_func()
+
+##--------------------------------------------------
+#link_02 - voltar ao home
+
+        os.system('cls') or None
+        retorno('Retornando para o menu principal')
+        exec(open("./comp/link_02.py").read())
+
+##------------------------------------------------
+#Funcoes atreladas
+# usado com o link_02 no py do menu secundario
+
+def some_func():
+    print ('')
+if __name__ == '__main__':
+    # sistema.py executado como script
+    # faça alguma coisa
+    some_func()
+
+##--------------------------------------------------
+#

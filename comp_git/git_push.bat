@@ -1,0 +1,2 @@
+echo ola testando
+pause

@@ -1,0 +1,19 @@
+
+- instalar via CMD:
+
+pip install pyautogui
+pip install pillow
+pip install selenium
+pip install speedtest-cli
+pip install termcolor
+
+python --version
+pip --version
+    Esse comando retornará a versão do pip que está instalada em sua máquina. 
+    O pip é o gerenciador de pacote do Python. Com ele você poderá adicionar novas funcionalidades ao seu Python.
+show Mostra informações sobre os pacotes instalados.
+
+
+#ativar a cor do pacote
+reg add HKEY_CURRENT_USER\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x00000001 /f
+https://pypi.org/project/termcolor/
