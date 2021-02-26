@@ -17,3 +17,8 @@ show Mostra informações sobre os pacotes instalados.
 #ativar a cor do pacote
 reg add HKEY_CURRENT_USER\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x00000001 /f
 https://pypi.org/project/termcolor/
+
+
+# exemplos de diretorios
+http://www.w3big.com/pt/python/os-file-methods.html
+https://www.tutorialspoint.com/python3/os_getcwd.htm

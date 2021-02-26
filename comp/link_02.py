@@ -1,9 +1,8 @@
-from sistema import *
+def mensagem():
+    print("Olá, mundo")
 
-def service_func():
-    print ('service func')
+mensagem()
 
-if __name__ == '__main__':
-    # comunicao de retorno para o menu principal
-    service_func()
-    sistema.some_func()
+#Sexec(open("./funcoes/conexao_seanet.py").read())
+
+print('Opção 3 - Testar conectividade dos Smart homes')

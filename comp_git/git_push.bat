@@ -1,2 +1,0 @@
-echo ola testando
-pause

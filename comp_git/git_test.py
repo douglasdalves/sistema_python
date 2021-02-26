@@ -10,13 +10,17 @@ def cabecalho (txt):
     print(linha())
 
 
-cabecalho('Verificando o Acesso ao DNS do Google')
-os.system('tracert -d -w 2000 dns.google')
+cabecalho('Funcoes do GitHub')
 
-cabecalho('Consulta de DNS com Site')
+os.chdir('C:\scripts')
+#Altere o diretório de trabalho atual
+print ("Voce esta em: %s" % os.getcwd())
+#Retorna o diretório de trabalho atual
+
+os.system('git status')
+
+
 print('\n')
-os.system('nslookup')
-
 os.system('echo Data do teste: %date%')
 os.system('echo Hora do teste: %time%')
 os.system('echo Equipamento testado: %computername%')

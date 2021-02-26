@@ -9,7 +9,14 @@ import subprocess
 import webbrowser
 
 #------------------------------------------------
-#Linhas de personalizacao
+# funcao test de status do http
+
+def test_conexao():
+    print('\n')
+    print('HTTP Status Code da Pagina speedtest.net')
+    os.system('curl --write-out %{http_code} --silent --output /dev/null www.google.com.br')
+
+#test_conexao()
 
 
 #------------------------------------------------
@@ -19,8 +26,10 @@ while True:
     resposta = menu(['Abrir o Chrome para testes','Ping da Conexao','Conectividade - Smart home','Conectividade - Notebooks','Conectividade - Smartphones','Testes2','Captura de Tela','Retornar ao Home'])
     if resposta == 1:
         os.system('cls') or None
-        print('Opção 1 - Abrindo o navegor padrao')
-        exec(open("./funcoes/browserbot.py").read())
+        print('Opcao 1 - Abrindo o navegor padrao')
+        #exec(open("./funcoes/browserbot.py").read())
+        test_conexao()
+        os.system('start ./funcoes/browserbot.py')
         #webbrowser.open_new_tab('www.speedtest.net')
         print('\n')
     elif resposta == 2:
