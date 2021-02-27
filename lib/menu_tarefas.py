@@ -22,7 +22,7 @@ while True:
     elif resposta == 2:
         print('Opcao 2 - GitHub')
         os.system('cls') or None
-        os.system('start ./comp_git/git_push.bat')
+        exec(open("./comp_git/git_test.py").read())
     elif resposta == 3:
         print('Opcao 3 - Info de Hardware')
         os.system('cls') or None
