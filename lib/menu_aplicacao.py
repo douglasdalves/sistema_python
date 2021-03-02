@@ -56,7 +56,7 @@ while True:
         capturar.save('print.png')
     elif resposta == 8:
         os.system('cls') or None
-        retorno('Retornando para o menu principal')
+        frase_retorno()
         exec(open("sistema.py").read())
     else:
         leia_opcao()

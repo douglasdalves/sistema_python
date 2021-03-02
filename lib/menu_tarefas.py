@@ -7,6 +7,7 @@ import os
 import pyautogui
 import subprocess
 
+
 #------------------------------------------------
 
 
@@ -18,7 +19,7 @@ while True:
     if resposta == 1:
         os.system('cls') or None
         print('Opcao 1 - Info de Pacotes')
-        exec(open("./funcoes_tarefas/detalhes_pacotes.py").read())
+        exec(open("./funcoes_tarefas/pacotes_detalhes.py").read())
     elif resposta == 2:
         print('Opcao 2 - GitHub')
         os.system('cls') or None
@@ -41,7 +42,7 @@ while True:
         capturar.save('print.png')
     elif resposta == 8:
         os.system('cls') or None
-        retorno('Retornando para o menu principal')
+        frase_retorno()
         exec(open("sistema.py").read())
     else:
         leia_opcao()

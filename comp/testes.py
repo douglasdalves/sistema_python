@@ -1,21 +1,21 @@
 import os
+import sys
+from termcolor import colored
 
-while True:
+def linha_igual(tam = 42):
+    return '=' * tam
+
+def retorno (txt):
+    print(linha_igual())
+    print(txt.center(42))
+    print(linha_igual())
     print('\n')
-    aplicar = str(input('Voce quer realizar as alteracoes? '))
-    if aplicar == 'sim':
-        print('\n')
-        print('Certo vou aplicar o git add .')
-        #os.system('git add .')
-        print('Agora precisa commitar, digite abaixo..')
-        os.system(input())
-        print('\n')
-        os.system('git log')
-    elif aplicar == 'enviar':
-        print('Enviando dados ao Servidor')
-        os.system('git push server master')
-        print('\n')
-    else:
-        aplicar == 'nao'
-        print('Tudo bem volte quando quiser')
-        break
+
+def frase_retorno():
+    retorno('Retornando para o menu principal')
+
+
+frase_retorno()
+#retorno('Retornando para o menu principal')
+#retorno(colored('Retornando para o menu principal', 'white', 'on_red'))
+

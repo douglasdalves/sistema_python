@@ -17,40 +17,59 @@ cabecalho('Funcoes do GitHub')
 
 os.chdir('C:\scripts') #Altere o diretório de trabalho atual
 print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
-print('Lista o Repositorio remoto:')
-os.system('git remote')
+
+print('Lista o Repositorio remoto: ')
+os.system('git remote -v')
+
+print('Lista as branches: ')
+os.system('git branch')
 
 print('\n')
 os.system('git status')
+
+print('\n')
+os.system('git log')
 
 #os.system('git push server master')---
 #------------------------------------------------
 # Aplicar alteracoes
 
 while True:
-    print('\n')
+    cabecalho('Funcoes: 1-Commit  2-Enviar_Server 3-GitHub')
     aplicar = str(input('Voce quer realizar as alteracoes? '))
-    if aplicar == 'sim':
+    if aplicar == '1':
+        print('\n')
+        os.system('git checkout upgrade')
         print('\n')
         print('Certo vou aplicar o git add .')
         os.system('git add .')
+        print('\n')
         print('Agora precisa commitar, digite abaixo..')
+        print('ex: git commit -m "msg"')
+        print('\n')
         os.system(input())
         print('\n')
         os.system('git log')
-    elif aplicar == 'enviar':
+    elif aplicar == '2':
         print('Enviando dados ao Servidor')
-        os.system('git push server master')
+        #os.system('git push server_sistema master')
+        print('\n')
+        os.chdir('C:\sistema_git') #Altere o diretório de trabalho atual
+        print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
+        os.system('git log')
+        os.chdir('C:\scripts')
+    elif aplicar == '3':
+        print('Enviando dados ao Servidor')
+        os.system('')
         print('\n')
     else:
         aplicar == 'nao'
-        print('Tudo bem volte quando quiser')
+        cabecalho('Tudo bem volte quando quiser')
         break
 
 #------------------------------------------------
 # dados padroes finais
 
-print('\n')
 os.system('echo Data do teste: %date%')
 os.system('echo Hora do teste: %time%')
 os.system('echo Equipamento testado: %computername%')

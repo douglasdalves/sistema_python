@@ -54,5 +54,7 @@ def retorno (txt):
     print(linha_igual())
     print('\n')
 
+def frase_retorno():
+    retorno('Retornando para o menu principal')
 
 #----------------------------------------
