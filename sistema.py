@@ -7,6 +7,7 @@ import os
 import pyautogui
 from termcolor import colored
 import sys
+import subprocess
 
 #------------------------------------------------
 #Linhas de personalizacao

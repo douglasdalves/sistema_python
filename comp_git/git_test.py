@@ -1,4 +1,6 @@
 import os
+from termcolor import colored
+import sys
 
 def linha(tam = 42):
     return '-' * tam
@@ -18,17 +20,17 @@ cabecalho('Funcoes do GitHub')
 os.chdir('C:\scripts') #Altere o diretório de trabalho atual
 print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
 
-print('Lista o Repositorio remoto: ')
+print(colored('Lista o Repositorio remoto:', 'blue', attrs=['bold']))
 os.system('git remote -v')
 
-print('Lista as branches: ')
+print(colored('Lista as branches:', 'blue', attrs=['bold']))
 os.system('git branch')
 
 print('\n')
 os.system('git status')
 
 print('\n')
-os.system('git log')
+os.system('git log --graph')
 
 #os.system('git push server master')---
 #------------------------------------------------
@@ -49,10 +51,10 @@ while True:
         print('\n')
         os.system(input())
         print('\n')
-        os.system('git log')
+        os.system('git log --oneline')
     elif aplicar == '2':
         print('Enviando dados ao Servidor')
-        #os.system('git push server_sistema master')
+        os.system('git push server_sistema master')
         print('\n')
         os.chdir('C:\sistema_git') #Altere o diretório de trabalho atual
         print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual

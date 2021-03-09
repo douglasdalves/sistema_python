@@ -21,4 +21,7 @@ https://pypi.org/project/termcolor/
 
 # exemplos de diretorios
 http://www.w3big.com/pt/python/os-file-methods.html
-https://www.tutorialspoint.com/python3/os_getcwd.htm
+https://www.tutorialspoint.co
+
+
+https://docs.python.org/3/library/subprocess.html

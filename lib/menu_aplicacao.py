@@ -7,6 +7,7 @@ import os
 import pyautogui
 import subprocess
 import webbrowser
+import sys
 
 #------------------------------------------------
 # funcao test de status do http

@@ -1,21 +1,31 @@
+import subprocess
 import os
-import sys
-from termcolor import colored
+import platform
 
-def linha_igual(tam = 42):
-    return '=' * tam
 
-def retorno (txt):
-    print(linha_igual())
-    print(txt.center(42))
-    print(linha_igual())
+
+
+print(platform.system())
+print(platform.version())
+print(platform.node())
+print(platform.processor())
+print('\n')
+
+import getpass
+print(getpass.getuser())
+print(getpass.())
+
+
+
+
+def dados_pc():
+    data_e_hora_atuais = datetime.now()
+    data_e_hora_em_texto = data_e_hora_atuais.strftime('%d/%m/%Y %H:%M')
+    cpu = platform.node()
+    user = getpass.getuser()
     print('\n')
-
-def frase_retorno():
-    retorno('Retornando para o menu principal')
-
-
-frase_retorno()
-#retorno('Retornando para o menu principal')
-#retorno(colored('Retornando para o menu principal', 'white', 'on_red'))
-
+    print('--------- Testes Concluidos ---------')
+    print(colored(f'Data e Hora do teste: {data_e_hora_em_texto}', 'blue', attrs=['bold']))
+    print(colored(f'Equipamento do Teste: {cpu}', 'blue', attrs=['bold']))
+    print(colored(f'Usuario do Sistema: {user}', 'blue', attrs=['bold']))
+    print('\n')

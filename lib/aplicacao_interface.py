@@ -57,4 +57,3 @@ def retorno (txt):
 def frase_retorno():
     retorno('Retornando para o menu principal')
 
-#----------------------------------------
