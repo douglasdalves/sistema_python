@@ -39,22 +39,25 @@ def roteador_conexao():
 func_cabecalho('Roteador - C60')
 roteador_conexao()
 #os.system('ping -n 3 192.168.8.1')
-subprocess.run(["ping", "-n", "3", "192.168.8.1"])
+subprocess.run(["ping", "-n", "4", "192.168.8.1"])
 
 
 func_cabecalho('Smart TV - LG')
-subprocess.run(["ping", "-n", "3", "192.168.8.103"])
+subprocess.run(["ping", "-n", "4", "192.168.8.103"])
 
 
 func_cabecalho('Echo Dot - Alexa')
 alexa_conexao()
-subprocess.run(["ping", "-n", "3", "192.168.8.107"])
+subprocess.run(["ping", "-n", "4", "192.168.8.107"])
 
 
 func_cabecalho('Smart plug 1')
-subprocess.run(["ping", "-n", "3", "192.168.8.108"])
+subprocess.run(["ping", "-n", "4", "192.168.8.108"])
 
 
 func_cabecalho('Smart plug 2')
-subprocess.run(["ping", "-n", "3", "192.168.8.109"])
+subprocess.run(["ping", "-n", "4", "192.168.8.109"])
+
+func_cabecalho('Smart Lampada')
+subprocess.run(["ping", "-n", "4", "192.168.8.110"])
 dados_pc()

@@ -15,19 +15,19 @@ import subprocess
 #Codigo do menu 5
 
 while True:
-    resposta = menu(['Pacotes do Python','GitHub','Test','Test_01','Test_02','Test_03','Captura de Tela','Retornar ao Home'])
+    resposta = menu(['Pacotes do Python','GitHub','DevOps','Test_01','Test_02','Test_03','Captura de Tela','Retornar ao Home'])
     if resposta == 1:
         os.system('cls') or None
         print('Opcao 1 - Info de Pacotes')
         exec(open("./funcoes_tarefas/pacotes_detalhes.py").read())
     elif resposta == 2:
-        print('Opcao 2 - GitHub')
+        print('Opcao 2 - Infos em GitHub')
         os.system('cls') or None
         exec(open("./comp_git/git_test.py").read())
     elif resposta == 3:
-        print('Opcao 3 - Info de Hardware')
+        print('Opcao 3 - Infos em DevOps')
         os.system('cls') or None
-        exec(open("./funcoes/info_hardware.py").read())
+        exec(open("./funcoes_tarefas/func_devops.py").read())
     elif resposta == 4:
         print('Opcao 4 - Bateria')
         os.system('cls') or None
