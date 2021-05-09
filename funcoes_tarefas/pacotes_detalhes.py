@@ -10,6 +10,8 @@ from funcoes.interface_test import *
 func_cabecalho('Lista os Pacotes do Python')
 print('\n')
 os.system('pip list')
+os.system('hostname > ./bkp_arquivos/backupPIP_python.txt')
+os.system('pip list >> ./bkp_arquivos/backupPIP_python.txt')
 
 func_cabecalho('Pacotes do Python')
 

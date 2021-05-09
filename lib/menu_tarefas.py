@@ -15,7 +15,7 @@ import subprocess
 #Codigo do menu 5
 
 while True:
-    resposta = menu(['Pacotes do Python','GitHub','DevOps','Test_01','Test_02','Test_03','Captura de Tela','Retornar ao Home'])
+    resposta = menu(['Pacotes do Python','GitHub','DevOps','Variavel Ambiente','Test_02','Test_03','Captura de Tela','Retornar ao Home'])
     if resposta == 1:
         os.system('cls') or None
         print('Opcao 1 - Info de Pacotes')
@@ -29,9 +29,9 @@ while True:
         os.system('cls') or None
         exec(open("./funcoes_tarefas/func_devops.py").read())
     elif resposta == 4:
-        print('Opcao 4 - Bateria')
+        print('Opcao 4 - Variaveis de Ambiente')
         os.system('cls') or None
-        exec(open("./funcoes/conexao2.py").read())
+        exec(open("./funcoes_tarefas/func_variavel.py").read())
     elif resposta == 5:
         print('Opcao 5 - test1')
     elif resposta == 6:
