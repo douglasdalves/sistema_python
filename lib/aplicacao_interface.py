@@ -1,5 +1,7 @@
 import sys
 from termcolor import colored
+import pyautogui
+import os
 
 #--------------------------------------------
 ## configuracoes das mensagens
@@ -20,6 +22,18 @@ def leiaInt(msg):
 
 def leia_opcao():
     print(colored('ERRO! Digite uma opcao valida!','magenta'))
+
+#--------------------------------------------
+### 'Configuracoes de opcoes'
+
+def gerar_print_aplicacao():
+    print('\n')
+    print('Print gerado em bkp_arquivos')
+    print('\n')
+    capturar = pyautogui.screenshot()
+    capturar.save('./bkp_arquivos/print_sistema.png')
+    os.system('start ./automacao_sh/altera_print.sh')
+
 
 #--------------------------------------------
 #('Configuracoes do menu')
@@ -55,5 +69,6 @@ def retorno (txt):
     print('\n')
 
 def frase_retorno():
+    os.system('cls') or None
     retorno('Retornando para o menu principal')
-
+    exec(open("sistema.py").read())

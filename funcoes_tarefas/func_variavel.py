@@ -25,9 +25,28 @@ os.system('echo %PATH%')
 print('\n')
 
 print(colored('Realizar o BKP da PATH', 'blue', attrs=['bold']))
-os.system('hostname > ./bkp_arquivos/backupPATH.txt')
-os.system('echo %PATH% >> ./bkp_arquivos/backupPATH.txt')
+os.system('echo %PATH% > ./bkp_arquivos/backupPATH.txt')
 os.system('ls -ltr ./bkp_arquivos/backupPATH.txt')
 print('\n')
 print('Backup efetuado para o arquivo.TXT')
 print('\n')
+
+
+
+#------------------------------------------------
+# chamar a instalacao de pacotes
+
+while True:
+    print('Funcoes: 1-Nao instalar')
+    print('         2-Realizar arquivo de BKP')
+    print('\n')
+    aplicar = str(input('Voce quer aplicar pacotes do Python? '))
+    if aplicar == '1':
+        cabecalho('Tudo bem volte quando quiser')
+        break
+    else:
+        aplicar == '2'
+        os.system('start ./automacao_sh/altera_path.sh')
+        print('\n')
+        print('Backup efetuado para o arquivo.TXT')
+        print('\n')

@@ -52,13 +52,10 @@ while True:
     elif resposta == 6:
         print('Opção 6 - test')
     elif resposta == 7:
-        print('Opção 7 - Captura de Tela')
-        capturar = pyautogui.screenshot()
-        capturar.save('print.png')
+        print('Opcao 7 - Captura de Tela')
+        gerar_print_aplicacao()
     elif resposta == 8:
-        os.system('cls') or None
         frase_retorno()
-        exec(open("sistema.py").read())
     else:
         leia_opcao()
         sleep(2)

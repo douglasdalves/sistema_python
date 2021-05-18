@@ -56,13 +56,16 @@ while True:
         print('\n')
         os.system('git log --oneline')
     elif aplicar == '2':
-        print('Enviando dados ao Servidor')
+        print('Enviando ao Servidor local')
         print('\n')
         os.system('git checkout master')
         print(colored('Voce esta na branch:', 'blue', attrs=['bold']))
         os.system('git branch')
         print('\n')
+        os.system('git merge dev')
         os.system('git push server_sistema master')
+        print('\n')
+        os.system('git log --oneline')
         print('\n')
         os.chdir('C:\sistema_git') #Altere o diretório de trabalho atual
         print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
@@ -70,9 +73,10 @@ while True:
         os.chdir('C:\scripts')
         print('\n')
         os.system('git log --oneline')
+        os.system('git checkout dev')
     elif aplicar == '3':
         print('\n')
-        print('Enviando dados ao Servidor')
+        print('Enviando dados ao Git Hub')
         os.chdir('C:\sistema_git') #Altere o diretório de trabalho atual
         print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
         print('\n')

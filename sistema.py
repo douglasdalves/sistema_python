@@ -42,12 +42,9 @@ while True:
         os.system('cls') or None
         exec(open("./lib/menu_aplicacao.py").read())
     elif resposta == 6:
-        print('Opção 6 - Captura de Tela')
-        capturar = pyautogui.screenshot()
-        capturar.save('print.png')
+        gerar_print()
     elif resposta == 7:
-        cabecalho_sup('Saindo do sistema... Até logo')
-        exec(open("./funcoes/saindo_sistema.py").read())
+        funcao_sair()
     else:
         leia_opcao()
         sleep(2)

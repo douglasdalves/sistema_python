@@ -1,5 +1,8 @@
 import sys
+import os
+import pyautogui
 from termcolor import colored
+from time import sleep
 
 #--------------------------------------------
 ## configuracoes das mensagens
@@ -19,6 +22,25 @@ def leiaInt(msg):
 
 def leia_opcao():
     print(colored('ERRO! Digite uma opção válida!','magenta'))
+
+#--------------------------------------------
+## configuracoes das opcoes
+
+def gerar_print():
+    print('\n')
+    print('Opção 6 - Captura de Tela')
+    print('Print gerado em bkp_arquivos')
+    print('\n')
+    capturar = pyautogui.screenshot()
+    capturar.save('./bkp_arquivos/print_sistema.png')
+    os.system('start ./automacao_sh/altera_print.sh')
+
+def funcao_sair():
+    print('\n')
+    cabecalho_sup('Saindo do sistema... Até logo')
+    print('\n')
+    sleep(2)
+    exec(open("./funcoes/saindo_sistema.py").read())
 
 #--------------------------------------------
 #('Configuracoes do menu')

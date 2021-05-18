@@ -32,12 +32,9 @@ while True:
         print('Opcao 4 - Test')
     elif resposta == 5:
         print('Opcao 5 - Captura de Tela')
-        capturar = pyautogui.screenshot()
-        capturar.save('print.png')
+        gerar_print_aplicacao()
     elif resposta == 6:
-        os.system('cls') or None
         frase_retorno()
-        exec(open("sistema.py").read())
     else:
         leia_opcao()
         sleep(2)

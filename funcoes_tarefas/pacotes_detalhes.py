@@ -10,8 +10,14 @@ from funcoes.interface_test import *
 func_cabecalho('Lista os Pacotes do Python')
 print('\n')
 os.system('pip list')
-os.system('hostname > ./bkp_arquivos/backupPIP_python.txt')
-os.system('pip list >> ./bkp_arquivos/backupPIP_python.txt')
+os.system('pip list > ./bkp_arquivos/backupPIP_python.txt')
+os.system('ls -ltr ./bkp_arquivos/backupPIP_python.txt')
+print('\n')
+print('Backup efetuado para o arquivo.TXT')
+
+
+#subprocess.run(["ls", "-ltr",])
+#os.system('ls -ltr PIP_python*')
 
 func_cabecalho('Pacotes do Python')
 
@@ -20,16 +26,24 @@ func_cabecalho('Pacotes do Python')
 
 while True:
     print('Funcoes: 1-Instalar / 2-Nao instalar')
+    print('         3-Altera arquivos de BKP')
     print('\n')
     aplicar = str(input('Voce quer aplicar pacotes do Python? '))
     if aplicar == '1':
         print('\n')
         exec(open("pacotes_config.bat").read())
         print('\n')
-    else:
-        aplicar == '2'
+    elif aplicar == '2':
         func_cabecalho('Tudo bem volte quando quiser')
         break
+    else:
+        aplicar == '3'
+        os.system('start ./automacao_sh/altera_pacote.sh')
+        print('\n')
+        print('Backup efetuado para o arquivo.TXT')
+        print('\n')
+        #os.chdir('.\scripts\bkp_arquivos')
+        #subprocess.popen(["/scripts/bkp_arquivos", "ls", "-ltr"])
 
 dados_pc()
 
