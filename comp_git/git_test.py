@@ -2,22 +2,23 @@ import os
 from termcolor import colored
 import sys
 import subprocess
+#from lib.aplicacao_interface import *
 from funcoes.interface_test import *
 
-def linha(tam = 42):
+def linha_git(tam = 42):
     return '-' * tam
 
-def cabecalho (txt):
+def cabecalho_git (txt):
     print('\n')
-    print(linha())
+    print(linha_git())
     print(txt.center(42))
-    print(linha())
+    print(linha_git())
     print('\n')
 
 #------------------------------------------------
 # funcoes do cenario git
 
-cabecalho('Funcoes do GitHub')
+cabecalho_git('Funcoes do GitHub')
 
 os.chdir('C:\scripts') #Altere o diretório de trabalho atual
 print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
@@ -40,7 +41,8 @@ os.system('git log --oneline')
 # Aplicar alteracoes
 
 while True:
-    cabecalho('Funcoes: 1-Commit  2-Enviar_Server 3-GitHub')
+    cabecalho_git('Funcoes: 1-Commit  2-Enviar_Server 3-GitHub')
+    print('Opcao para sair, digite: Nao')
     aplicar = str(input('Voce quer realizar as alteracoes? '))
     if aplicar == '1':
         print('\n')
@@ -89,9 +91,10 @@ while True:
         print(colored('Processo Concluido, verifique no GitHub.', 'green', attrs=['bold']))
     else:
         aplicar == 'nao'
-        cabecalho('Tudo bem volte quando quiser')
+        cabecalho_git('Tudo bem volte quando quiser')
         os.system('git log --oneline')
         break
+
 
 #------------------------------------------------
 # dados padroes finais
