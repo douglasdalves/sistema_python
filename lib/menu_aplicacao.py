@@ -35,7 +35,7 @@ while True:
         print('\n')
     elif resposta == 2:
         os.system('cls') or None
-        os.system('start ./funcoes/ping_seanet.py')
+        os.system('start ./funcoes/conexao_seanet.py')
         #exec(open("./funcoes/ping_seanet.py").read())
     elif resposta == 3:
         print('Opção 3 - Testar conectividade dos Smart homes')

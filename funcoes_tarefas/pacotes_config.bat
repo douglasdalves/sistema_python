@@ -1,5 +1,5 @@
 @echo off
-title *** Funcoes do GitHub ***
+title *** Funcoes do PIP ***
 echo.
 echo -----------------------------------------
 echo   Instalacao dos pacotes para o python

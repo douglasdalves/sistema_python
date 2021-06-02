@@ -37,10 +37,10 @@ print('\n')
 # chamar a instalacao de pacotes
 
 while True:
-    print('Funcoes: 1-Nao instalar')
+    print('Funcoes: 1-Voltar ao menu')
     print('         2-Realizar arquivo de BKP')
     print('\n')
-    aplicar = str(input('Voce quer aplicar pacotes do Python? '))
+    aplicar = str(input('Digite uma das opcoes? '))
     if aplicar == '1':
         cabecalho('Tudo bem volte quando quiser')
         break
