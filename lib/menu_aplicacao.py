@@ -2,6 +2,7 @@
 #Importacao de dados
 
 from lib.aplicacao_interface import *
+from funcoes.conexao import *
 from time import sleep
 import os
 import pyautogui
@@ -12,12 +13,6 @@ import sys
 #------------------------------------------------
 # funcao test de status do http
 
-def test_conexao():
-    print('\n')
-    print('HTTP Status Code da Pagina speedtest.net')
-    os.system('curl --write-out %{http_code} --silent --output /dev/null www.google.com.br')
-
-#test_conexao()
 
 
 #------------------------------------------------
@@ -38,19 +33,16 @@ while True:
         os.system('start ./funcoes/conexao_seanet.py')
         #exec(open("./funcoes/ping_seanet.py").read())
     elif resposta == 3:
-        print('Opção 3 - Testar conectividade dos Smart homes')
-        os.system('cls') or None
-        exec(open("./funcoes/conexao1.py").read())
+        print('Opcao 3 - Testar conectividade dos Smart homes')
+        ping_smarthome()
     elif resposta == 4:
-        print('Opção 4 - Testar a conectividade dos Notebooks')
-        os.system('cls') or None
-        exec(open("./funcoes/conexao2.py").read())
+        print('Opcao 4 - Testar a conectividade dos Notebooks')
+        ping_not()
     elif resposta == 5:
-        print('Opção 5 - Testar a conectividade dos Smartphones')
-        os.system('cls') or None
-        exec(open("./funcoes/conexao3.py").read())
+        print('Opcao 5 - Testar a conectividade dos Smartphones')
+        ping_telefones()
     elif resposta == 6:
-        print('Opção 6 - test')
+        print('Opcao 6 - test')
     elif resposta == 7:
         print('Opcao 7 - Captura de Tela')
         gerar_print_aplicacao()

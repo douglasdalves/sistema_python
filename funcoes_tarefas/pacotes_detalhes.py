@@ -15,9 +15,8 @@ os.system('ls -ltr ./bkp_arquivos/backupPIP_python.txt')
 print('\n')
 print('Backup efetuado para o arquivo.TXT')
 
-
 #subprocess.run(["ls", "-ltr",])
-#os.system('ls -ltr PIP_python*')
+
 
 func_cabecalho('Pacotes do Python')
 

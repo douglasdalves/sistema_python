@@ -2,6 +2,7 @@
 #Importacao de dados
 
 from lib.aplicacao_interface import *
+from funcoes.info_hardware import *
 from time import sleep
 import os
 import pyautogui
@@ -19,8 +20,7 @@ while True:
     if resposta == 1:
         os.system('cls') or None
         print('Opcao 1 - Testes do Trace na Seanet')
-        exec(open("./funcoes/trace_na_rede.py").read())
-        #print('\n')
+        traceroute()
     elif resposta == 2:
         os.system('cls') or None
         os.system('start ./funcoes/consulta_dns.py')

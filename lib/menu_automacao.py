@@ -2,6 +2,8 @@
 #Importacao de dados
 
 from lib.aplicacao_interface import *
+from funcoes.infos_windows import *
+from funcoes.info_hardware import *
 from time import sleep
 import os
 import pyautogui
@@ -21,19 +23,17 @@ while True:
     if resposta == 1:
         os.system('cls') or None
         print('Opcao 1 - Detalhes da Build do SO')
-        exec(open("./funcoes/versao_windows.py").read())
+        versao_windows()
     elif resposta == 2:
         print('Opcao 2 - Detalhes do HardWare')
         os.system('cls') or None
-        exec(open("./funcoes/system_info.py").read())
+        system_info()
     elif resposta == 3:
         print('Opcao 3 - Info de Hardware')
-        os.system('cls') or None
-        exec(open("./funcoes/info_hardware.py").read())
+        info_hardware()
     elif resposta == 4:
-        print('Opcao 4 - Bateria')
+        print('Opcao 4')
         os.system('cls') or None
-        exec(open("./funcoes/conexao2.py").read())
     elif resposta == 5:
         print('Opcao 5 - test1')
     elif resposta == 6:

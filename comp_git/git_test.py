@@ -2,7 +2,6 @@ import os
 from termcolor import colored
 import sys
 import subprocess
-#from lib.aplicacao_interface import *
 from funcoes.interface_test import *
 from comp_git.git_funcoes import *
 
@@ -41,7 +40,7 @@ while True:
     elif aplicar == '2':
         func_server()
     elif aplicar == '3':
-        func_github
+        func_github()
     else:
         aplicar == 'nao'
         cabecalho_git('Tudo bem volte quando quiser')
