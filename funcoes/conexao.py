@@ -33,6 +33,14 @@ def roteador_conexao():
 #------------------------------------------------
 # funcoes do ping
 
+def ping_seanet():
+    func_cabecalho('Ping 40x para o IP da Seanet')
+    ping = subprocess.run(["ping", "-n", "40", "186.251.248.1"])
+    #os.system('ping -n 40 186.251.248.1')
+    #os.system('ping -n 8 192.168.246.17') #ip da vpn
+    dados_pc()
+
+
 def ping_smarthome():
     os.system('cls') or None
     func_cabecalho('Roteador - C60')
@@ -67,4 +75,10 @@ def ping_telefones():
     subprocess.run(["ping", "-n", "4", "192.168.8.104"])
     func_cabecalho('Smartphone Mi 8 lite')
     subprocess.run(["ping", "-n", "4", "192.168.8.105"])
+    dados_pc()
+
+def ping_desktop():
+    os.system('cls') or None
+    func_cabecalho('Teste Desktop WI-FI')
+    subprocess.run(["ping", "-n", "4", "192.168.8.106"])
     dados_pc()

@@ -3,6 +3,7 @@ import os
 import pyautogui
 from termcolor import colored
 from time import sleep
+import subprocess
 
 #--------------------------------------------
 ## configuracoes das mensagens
@@ -26,21 +27,26 @@ def leia_opcao():
 #--------------------------------------------
 ## configuracoes das opcoes
 
+myfile_saindo="C:/scripts/funcoes/saindo_sistema.py"
+myfile_captura="C:/scripts/bkp_arquivos/print_sistema.png"
+myfile_print="C:/scripts/automacao_sh/altera_print.sh"
+
+
 def gerar_print():
     print('\n')
     print('Opção 6 - Captura de Tela')
     print('Print gerado em bkp_arquivos')
     print('\n')
     capturar = pyautogui.screenshot()
-    capturar.save('./bkp_arquivos/print_sistema.png')
-    os.system('start ./automacao_sh/altera_print.sh')
+    capturar.save(myfile_captura)
+    subprocess.run(myfile_print, shell=True)
 
 def funcao_sair():
     print('\n')
     cabecalho_sup('Saindo do sistema... Até logo')
     print('\n')
     sleep(2)
-    exec(open("./funcoes/saindo_sistema.py").read())
+    exec(open(myfile_saindo).read())
 
 #--------------------------------------------
 #('Configuracoes do menu')
