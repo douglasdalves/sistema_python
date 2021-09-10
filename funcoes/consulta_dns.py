@@ -1,24 +1,15 @@
-import os
-
-def linha(tam = 42):
-    return '-' * tam
-
-def cabecalho (txt):
-    print('\n')
-    print(linha())
-    print(txt.center(42))
-    print(linha())
+import sys
+import subprocess
+from termcolor import colored
+from variaveis.interface_config import *
 
 
-cabecalho('Verificando o Acesso ao DNS do Google')
-os.system('tracert -d -w 2000 dns.google')
+func_cabecalho('Verificando o Acesso ao DNS do Google')
+subprocess.run(["tracert", "-d", "-w", "2000", "dns.google"])
 
-cabecalho('Consulta de DNS com Site')
+func_cabecalho('Consulta de DNS com Site')
 print('\n')
-os.system('nslookup')
+subprocess.run(["nslookup"])
 
-os.system('echo Data do teste: %date%')
-os.system('echo Hora do teste: %time%')
-os.system('echo Equipamento testado: %computername%')
-os.system('echo Usuario do windows: %username%')
+dados_pc()
 print('\n')

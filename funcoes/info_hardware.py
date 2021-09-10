@@ -2,7 +2,7 @@
 #------------------------------------------------
 
 import os
-from funcoes.interface_test import *
+from variaveis.interface_config import *
 import subprocess
 from termcolor import colored
 
@@ -39,7 +39,15 @@ def info_hardware():
 
 def traceroute():
     func_cabecalho('Excutando um Traceroute na Seanet')
-    subprocess.run(["tracert", "186.251.248.1"])
+    subprocess.run(["tracert", ping_seanet])
     func_cabecalho('Excutando um Pathping na Seanet')
-    subprocess.run(["pathping", "186.251.248.1"])
+    subprocess.run(["pathping", ping_seanet])
+    dados_pc()
+
+#------------------------------------------------
+# Rotas de rede
+
+def route():
+    func_cabecalho('Executando um Route Print')
+    subprocess.run(["route", "print"])
     dados_pc()

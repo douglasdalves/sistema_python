@@ -1,8 +1,7 @@
 import os
 from termcolor import colored
-import sys
 import subprocess
-from funcoes.interface_test import *
+from variaveis.interface_config import *
 from comp_git.git_funcoes import *
 
 

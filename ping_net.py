@@ -1,10 +1,9 @@
 #------------------------------------------------
 #Importacao de dados
 
-import os
 import subprocess
 from termcolor import colored
-from funcoes.interface_test import *
+from variaveis.interface_config import *
 #from time import sleep
 
 #------------------------------------------------

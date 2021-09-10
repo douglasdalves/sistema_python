@@ -2,16 +2,18 @@ import os
 import sys
 import subprocess
 from termcolor import colored
-from funcoes.interface_test import *
+from variaveis.interface_config import *
+
 
 #--------------------------------------------
 # configuracoes do menu
 
+
 func_cabecalho('Lista os Pacotes do Python')
 print('\n')
-os.system('pip list')
+subprocess.run(["pip", "list",])
 os.system('pip list > ./bkp_arquivos/backupPIP_python.txt')
-os.system('ls -ltr ./bkp_arquivos/backupPIP_python.txt')
+subprocess.run(["ls", "-ltr", myfile_bkp_pip])
 print('\n')
 print('Backup efetuado para o arquivo.TXT')
 
@@ -23,9 +25,12 @@ func_cabecalho('Pacotes do Python')
 #------------------------------------------------
 # chamar a instalacao de pacotes
 
-while True:
-    print('Funcoes: 1-Instalar / 2-Nao instalar')
-    print('         3-Altera arquivos de BKP')
+aplicar = 0
+while aplicar != 3:
+    print('''Funcoes: 
+    [1] Instalar
+    [2] Nao instalar
+    [3] Altera arquivos de BKP''')
     print('\n')
     aplicar = str(input('Voce quer aplicar pacotes do Python? '))
     if aplicar == '1':

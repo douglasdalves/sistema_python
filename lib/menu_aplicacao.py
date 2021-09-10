@@ -2,14 +2,11 @@
 #Importacao de dados
 
 from platform import python_branch
-from lib.aplicacao_interface import *
+from variaveis.interface_config import *
 from funcoes.conexao import *
 from time import sleep
 import os
-import pyautogui
-import subprocess
 import webbrowser
-import sys
 
 ##########
 # exemplos
@@ -32,7 +29,7 @@ myfile="C:/scripts/funcoes/conexao_seanet.py"
 #Codigo do menu 5
 
 while True:
-    resposta = menu(['Abrir o Chrome para testes','Ping da Conexao','Conectividade - Smart home','Conectividade - Notebooks','Conectividade - Smartphones','Conectividade - Desktop','Captura de Tela','Retornar ao Home'])
+    resposta = menu_secund(['Abrir o Chrome para testes','Ping da Conexao','Conectividade - Smart home','Conectividade - Notebooks','Conectividade - Smartphones','Conectividade - Desktop','Captura de Tela','Retornar ao Home'])
     if resposta == 1:
         os.system('cls') or None
         print('Opcao 1 - Abrindo o navegor padrao')
@@ -56,7 +53,7 @@ while True:
         ping_desktop()
     elif resposta == 7:
         print('Opcao 7 - Captura de Tela')
-        gerar_print_aplicacao()
+        gerar_print()
     elif resposta == 8:
         frase_retorno()
     else:

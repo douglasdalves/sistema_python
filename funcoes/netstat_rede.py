@@ -1,4 +1,5 @@
 import os
+from time import sleep
 
 def linha(tam = 42):
     return '-' * tam
@@ -13,9 +14,4 @@ def cabecalho (txt):
 
 cabecalho('Testando a Rede em Netstat')
 os.system('Netstat')
-
-os.system('echo Data do teste: %date%')
-os.system('echo Hora do teste: %time%')
-os.system('echo Equipamento testado: %computername%')
-os.system('echo Usuario do windows: %username%')
-print('\n')
+sleep(80)

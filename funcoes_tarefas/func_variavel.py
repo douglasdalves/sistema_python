@@ -36,9 +36,11 @@ print('\n')
 #------------------------------------------------
 # chamar a instalacao de pacotes
 
-while True:
-    print('Funcoes: 1-Voltar ao menu')
-    print('         2-Realizar arquivo de BKP')
+aplicar = 0
+while aplicar != 3:
+    print('''Funcoes:
+    [1] Voltar ao menu
+    [2] Realizar arquivo de BKP''')
     print('\n')
     aplicar = str(input('Digite uma das opcoes? '))
     if aplicar == '1':

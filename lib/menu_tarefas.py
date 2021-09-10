@@ -1,11 +1,12 @@
 #------------------------------------------------
 #Importacao de dados
 
-from lib.aplicacao_interface import *
+#from comp_git.git_test import func_git_test
+from funcoes_tarefas.func_devops import func_devops
+from variaveis.interface_config import *
 from time import sleep
 import os
-import pyautogui
-import subprocess
+
 
 
 #------------------------------------------------
@@ -15,7 +16,7 @@ import subprocess
 #Codigo do menu 5
 
 while True:
-    resposta = menu(['Pacotes do Python','GitHub','DevOps','Variavel Ambiente','Install Programas','Test_03','Captura de Tela','Retornar ao Home'])
+    resposta = menu_secund(['Pacotes do Python','GitHub','DevOps','Variavel Ambiente','Install Programas','Backup Particao','Captura de Tela','Retornar ao Home'])
     if resposta == 1:
         os.system('cls') or None
         print('Opcao 1 - Info de Pacotes')
@@ -27,7 +28,7 @@ while True:
     elif resposta == 3:
         print('Opcao 3 - Infos em DevOps')
         os.system('cls') or None
-        exec(open("./funcoes_tarefas/func_devops.py").read())
+        func_devops()
     elif resposta == 4:
         print('Opcao 4 - Variaveis de Ambiente')
         os.system('cls') or None
@@ -38,9 +39,11 @@ while True:
         os.system('start ./funcoes_tarefas/instal_programas.bat')
     elif resposta == 6:
         print('Opcao 6 - test2')
+        os.system('cls') or None
+        os.system('start ./automacao_sh/backup_sistema.sh')
     elif resposta == 7:
         print('Opcao 7 - Captura de Tela')
-        gerar_print_aplicacao()
+        gerar_print()
     elif resposta == 8:
         frase_retorno()
     else:

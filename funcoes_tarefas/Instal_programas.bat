@@ -60,14 +60,12 @@ echo -----------------------------------------
 echo.
 choco install -y python
 echo.
-choco install -y git
-echo.
 echo -----------------------------------------
 echo          Processo finalizado
 echo -----------------------------------------
 echo.
 echo Itens relacionados para instalacao:
-echo python - git -
+echo python
 echo.
 echo ---------------------------------------------
 echo. Concluido, abra o sistema para testar..

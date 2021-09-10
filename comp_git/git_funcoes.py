@@ -2,8 +2,12 @@ import os
 from termcolor import colored
 import sys
 import subprocess
-#from lib.aplicacao_interface import *
-from funcoes.interface_test import *
+from variaveis.interface_config import *
+
+#------------------------------------------------
+# variaveis
+
+git_oneline = "os.system('git log --oneline') #exibicao de log do git"
 
 #------------------------------------------------
 # configuracoes de css
@@ -22,18 +26,18 @@ def cabecalho_git (txt):
 # Aplicar alteracoes
 
 def func_commit():
-    print('\n')
+    espaco
     os.system('git checkout dev')
-    print('\n')
+    espaco
     print('Certo vou aplicar o git add .')
     os.system('git add .')
-    print('\n')
+    espaco
     print('Agora precisa commitar, digite abaixo..')
     print('ex: git commit -m "msg"')
-    print('\n')
+    espaco
     os.system(input())
-    print('\n')
-    os.system('git log --oneline')
+    espaco
+    git_oneline
 
 def func_server():
     print('Enviando ao Servidor local')

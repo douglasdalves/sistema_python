@@ -1,5 +1,5 @@
 import subprocess
-from funcoes.interface_test import *
+from variaveis.interface_config import *
 
 
 def versao_windows():
