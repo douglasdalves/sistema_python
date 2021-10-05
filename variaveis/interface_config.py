@@ -179,13 +179,17 @@ def menu_secund(lista):
 #--------------------------------------------
 #('Retornando para o menu principal')
 
+
+#frase_retorno = 'Retornando para o menu principal'
+fra1 = colored('Retornando para o menu principal', 'yellow', attrs=['bold'])
+
 def retorno (txt):
     print(linha())
-    print(txt.center(42))
+    print(txt.center(53))
     print(linha())
     print('\n')
 
 def frase_retorno():
     os.system('cls') or None
-    retorno('Retornando para o menu principal')
+    retorno('{}'.format(fra1))
     exec(open("sistema.py").read())

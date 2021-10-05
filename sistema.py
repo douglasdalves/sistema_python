@@ -1,11 +1,19 @@
 #------------------------------------------------
 #Importacao de dados
 
+from lib.menu_tarefas import abrir_taref
+from lib.menu_avancado import abrir_avanc
+from lib.menu_automacao import abrir_autom
+from lib.menu_aplicacao import abrir_aplic
+from lib.menu_wsl import abrir_wsl
+
 from variaveis.interface_config import *
 from time import sleep
 import os
 from termcolor import colored
 
+
+from lib import *
 
 #------------------------------------------------
 #Codigo do menu principal
@@ -15,28 +23,27 @@ while True:
     if resposta == 1:
         print('Opcao 1')
         os.system('cls') or None
-        #os.system('test.bat')
         exec(open("./funcoes/conexao_seanet.py").read())
     elif resposta == 2:
         print('Opcao 2')
         os.system('cls') or None
-        exec(open("./lib/menu_tarefas.py").read())
+        abrir_taref()
     elif resposta == 3:
         print('Opcao 3')
         os.system('cls') or None
-        exec(open("./lib/menu_avancado.py").read())
+        abrir_avanc()
     elif resposta == 4:
         print('Opcao 4 - Validacao Automatizada')
         os.system('cls') or None
-        exec(open("./lib/menu_automacao.py").read())
+        abrir_autom()
     elif resposta == 5:
         print('Opcao 5 - Monitoracao da conexao')
         os.system('cls') or None
-        exec(open("./lib/menu_aplicacao.py").read())
+        abrir_aplic()
     elif resposta == 6:
         print('Opcao 6')
         os.system('cls') or None
-        exec(open("./lib/menu_wsl.py").read())
+        abrir_wsl()
     elif resposta == 7:
         func_pull()
     elif resposta == 8:

@@ -1,8 +1,10 @@
-import sys
-import subprocess
-from termcolor import colored
-from variaveis.interface_config import *
+#------------------------------------------------
+#Importacao de dados
 
+from variaveis.interface_config import func_cabecalho
+from variaveis.interface_config import dados_pc
+
+import subprocess
 
 func_cabecalho('Verificando o Acesso ao DNS do Google')
 subprocess.run(["tracert", "-d", "-w", "2000", "dns.google"])
