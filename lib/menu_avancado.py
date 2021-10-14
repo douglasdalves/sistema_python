@@ -9,6 +9,8 @@ import os
 #------------------------------------------------
 #Linhas de personalizacao
 
+myfile_dns = r'C:/scripts/funcoes/consulta_dns.py'
+myfile_netstat = r'C:/scripts/funcoes/netstat_rede.py'
 
 #------------------------------------------------
 #Codigo do menu 5
@@ -22,11 +24,11 @@ def abrir_avanc():
             traceroute()
         elif resposta == 2:
             os.system('cls') or None
-            os.system('start ./funcoes/consulta_dns.py')
+            os.startfile(myfile_dns)
         elif resposta == 3:
             print('Opcao 3 - Testando a Rede em Netstat')
             os.system('cls') or None
-            os.system('start ./funcoes/netstat_rede.py')
+            os.startfile(myfile_netstat)
         elif resposta == 4:
             print('Opcao 4 - Test')
         elif resposta == 5:

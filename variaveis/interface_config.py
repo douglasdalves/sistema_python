@@ -14,10 +14,13 @@ from time import sleep
 
 espaco = print('\n')
 
-myfile_saindo="C:/scripts/funcoes/saindo_sistema.py"
-myfile_captura="C:/scripts/bkp_arquivos/print_sistema.png"
-myfile_print="C:/scripts/automacao_sh/altera_print.sh"
-myfile_bkp_pip="C:/scripts/bkp_arquivos/backupPIP_python.txt"
+myfile_saindo = r'C:/scripts/funcoes/saindo_sistema.py'
+
+myfile_captura = r'C:/scripts_logs/captura/print_sistema.png'
+myfile_local_captura = r'C:/scripts_logs/captura'
+LOG_FILENAME = datetime.now().strftime('Print_aplic_%d_%m_%Y_%H_%M_%S.png')
+
+myfile_bkp_pip = r'C:/scripts_logs/info_pacotes/backupPIP_python.txt'
 
 #--------------------------------------------
 # variaveis das funcoes conexao
@@ -113,12 +116,15 @@ def leia_opcao():
 
 def gerar_print():
     print('\n')
-    print('Opção 6 - Captura de Tela')
-    print('Print gerado em bkp_arquivos')
+    print('-- Captura de Tela -- ')
+    print('Print gerado em Scripts_logs')
     print('\n')
     capturar = pyautogui.screenshot()
     capturar.save(myfile_captura)
-    subprocess.run(myfile_print, shell=True)
+    os.chdir(myfile_local_captura)
+    os.rename('print_sistema.png', LOG_FILENAME)
+    #subprocess.call(myfile_print, shell=True)
+
 
 def funcao_sair():
     print('\n')

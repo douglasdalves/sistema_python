@@ -12,18 +12,20 @@ from variaveis.interface_config import *
 func_cabecalho('Lista os Pacotes do Python')
 print('\n')
 subprocess.run(["pip", "list",])
-os.system('pip list > ./bkp_arquivos/backupPIP_python.txt')
+os.system('pip list > C:/scripts_logs/info_pacotes/backupPIP_python.txt')
 subprocess.run(["ls", "-ltr", myfile_bkp_pip])
 print('\n')
 print('Backup efetuado para o arquivo.TXT')
 
-#subprocess.run(["ls", "-ltr",])
+
 
 
 func_cabecalho('Pacotes do Python')
 
 #------------------------------------------------
 # chamar a instalacao de pacotes
+
+myfile_pacote = r'C:/scripts/automacao_sh/altera_pacote.sh'
 
 aplicar = 0
 while aplicar != 3:
@@ -42,14 +44,15 @@ while aplicar != 3:
         break
     else:
         aplicar == '3'
-        os.system('start ./automacao_sh/altera_pacote.sh')
+        os.startfile(myfile_pacote)
         print('\n')
         print('Backup efetuado para o arquivo.TXT')
         print('\n')
-        #os.chdir('.\scripts\bkp_arquivos')
-        #subprocess.popen(["/scripts/bkp_arquivos", "ls", "-ltr"])
 
 dados_pc()
+
+        #os.chdir('.\scripts\bkp_arquivos')
+        #subprocess.popen(["/scripts/bkp_arquivos", "ls", "-ltr"])
 
 #os.system('start C:\Windows\System32\cmd.exe /k %windir%\system32\ipconfig.exe')
 #os.system(' /scripts/funcoes/interface_rede.ps1')

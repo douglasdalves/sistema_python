@@ -31,4 +31,38 @@ if __name__ == '__main__':
     some_func()
 
 ##--------------------------------------------------
-#
+# .sh para trocar nome de arquivo
+
+CAMINHO_PASTA=/c/scripts_logs/captura
+ARQUIVO_ORG=print_sistema.png
+ARQUIVO_NOVO=Print_aplic_`date +%F,%H-%M-%S`.png
+cd $CAMINHO_PASTA
+mv $ARQUIVO_ORG $ARQUIVO_NOVO
+
+##--------------------------------------------------
+
+
+#!/bin/bash
+
+##----------------------------------##
+## copiar o sistema para a partiçao
+##----------------------------------##
+
+CAMINHO_PASTA=/mnt/c
+CAMINHO_SSD=/mnt/d/scripts
+ARQUIVO_COPIADO=scripts.bkp
+ARQUIVO_ORG=scripts.bkp.zip
+ARQUIVO_NOVO=scripts.bkp_`date +%F,%H-%M-%S`.zip
+cd $CAMINHO_PASTA
+
+gerar_dados(){
+    cp -r scripts /mnt/d/scripts/scripts.bkp
+    cd $CAMINHO_SSD
+    zip -rg scripts.bkp.zip scripts.bkp/
+    mv $ARQUIVO_ORG $ARQUIVO_NOVO
+    rm -rf $ARQUIVO_COPIADO
+}
+
+gerar_dados
+
+##--------------------------------------------------

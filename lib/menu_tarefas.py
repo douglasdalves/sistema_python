@@ -11,6 +11,8 @@ import os
 
 #------------------------------------------------
 
+myfile_bkp_sistema = r'C:/scripts/funcoes_tarefas/backup_sistema.py'
+myfile_programas = r'C:/scripts/funcoes_tarefas/instal_programas.bat'
 
 #------------------------------------------------
 #Codigo do menu 5
@@ -37,11 +39,11 @@ def abrir_taref():
         elif resposta == 5:
             print('Opcao 5 - Instacao de Progrmas via CHOCO')
             os.system('cls') or None
-            os.system('start ./funcoes_tarefas/instal_programas.bat')
+            os.startfile(myfile_programas)
         elif resposta == 6:
             print('Opcao 6 - test2')
             os.system('cls') or None
-            os.system('start ./automacao_sh/backup_sistema.sh')
+            exec(open(myfile_bkp_sistema).read())
         elif resposta == 7:
             print('Opcao 7 - Captura de Tela')
             gerar_print()

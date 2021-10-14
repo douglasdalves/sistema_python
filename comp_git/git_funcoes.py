@@ -72,13 +72,3 @@ def func_github():
     os.chdir('C:\scripts')
     print ("Voce esta em: %s" % os.getcwd())
     print(colored('Processo Concluido, verifique no GitHub.', 'green', attrs=['bold']))
-
-def func_pull():
-    print('Baixando os dados do repositorio')
-    print('\n')
-    os.system('git log --oneline')
-    os.chdir('C:')
-    print('\n')
-    os.system('git pull https://github.com/douglasdalves/sistema_python.git scripts')
-    print('\n')
-    os.system('git log --oneline')

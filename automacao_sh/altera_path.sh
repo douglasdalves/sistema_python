@@ -4,7 +4,7 @@
 ## no visual code, rodar em bash
 ##----------------------------------##
 
-CAMINHO_PASTA=/c/scripts/bkp_arquivos
+CAMINHO_PASTA=/c/scripts_logs/info_path
 ARQUIVO_ORG=backupPATH.txt
 ARQUIVO_NOVO=PATH_variavel_`date +%F,%H-%M-%S`.txt
 cd $CAMINHO_PASTA

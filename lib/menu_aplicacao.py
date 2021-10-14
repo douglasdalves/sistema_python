@@ -4,9 +4,9 @@
 from platform import python_branch
 from variaveis.interface_config import *
 from funcoes.conexao import *
+#from funcoes.browserbot import *
 from time import sleep
 import os
-import webbrowser
 
 ##########
 # exemplos
@@ -22,6 +22,7 @@ import webbrowser
 # 
 
 myfile="C:/scripts/funcoes/conexao_seanet.py"
+myfile_browser = r'C:/scripts/funcoes/browserbot.py'
 
 
 
@@ -35,7 +36,7 @@ def abrir_aplic():
             os.system('cls') or None
             print('Opcao 1 - Abrindo o navegor padrao')
             test_conexao()
-            os.system('start ./funcoes/browserbot.py')
+            os.startfile(myfile_browser)
             print('\n')
         elif resposta == 2:
             os.system('cls') or None

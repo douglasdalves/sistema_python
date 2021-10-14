@@ -4,7 +4,7 @@
 ## no visual code, rodar em bash
 ##----------------------------------##
 
-CAMINHO_PASTA=/c/scripts/bkp_arquivos
+CAMINHO_PASTA=/c/scripts_logs/info_pacotes
 ARQUIVO_ORG=backupPIP_python.txt
 ARQUIVO_NOVO=PIP_python_`date +%F,%H-%M-%S`.txt
 cd $CAMINHO_PASTA

@@ -14,6 +14,10 @@ def cabecalho (txt):
     print(linha())
     print('\n')
 
+myfile_bkp = r'C:/scripts_logs/info_path/backupPATH.txt'
+myfile_path = r'C:/scripts_logs/info_path/PATH*'
+myfile_sh = r'C:/scripts/automacao_sh/altera_path.sh'
+
 #------------------------------------------------
 # funcoes de variaveis
 
@@ -21,34 +25,18 @@ cabecalho('Variavel de Ambiente W10')
 
 print(colored('Consultar o conteudo da PATH.', 'blue', attrs=['bold']))
 print('\n')
-os.system('echo %PATH%')
+gera_path = os.system('echo %PATH%')
 print('\n')
 
-print(colored('Realizar o BKP da PATH', 'blue', attrs=['bold']))
-os.system('echo %PATH% > ./bkp_arquivos/backupPATH.txt')
-os.system('ls -ltr ./bkp_arquivos/backupPATH.txt')
+print(colored('Backup da PATH realizado', 'blue', attrs=['bold']))
+os.system('echo %PATH% > C:/scripts_logs/info_path/backupPATH.txt')
+subprocess.call(["ls", "-l", myfile_bkp])
+
+cabecalho('Arquivo alterado')
+subprocess.call(myfile_sh, shell=True)
+subprocess.call(["ls", "-l", myfile_path])
 print('\n')
-print('Backup efetuado para o arquivo.TXT')
+print('Backup efetuado para a pasta Scripts_logs')
 print('\n')
 
 
-
-#------------------------------------------------
-# chamar a instalacao de pacotes
-
-aplicar = 0
-while aplicar != 3:
-    print('''Funcoes:
-    [1] Voltar ao menu
-    [2] Realizar arquivo de BKP''')
-    print('\n')
-    aplicar = str(input('Digite uma das opcoes? '))
-    if aplicar == '1':
-        cabecalho('Tudo bem volte quando quiser')
-        break
-    else:
-        aplicar == '2'
-        os.system('start ./automacao_sh/altera_path.sh')
-        print('\n')
-        print('Backup efetuado para o arquivo.TXT')
-        print('\n')

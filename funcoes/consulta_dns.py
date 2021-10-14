@@ -1,8 +1,15 @@
 #------------------------------------------------
 #Importacao de dados
 
-from variaveis.interface_config import func_cabecalho
-from variaveis.interface_config import dados_pc
+def linha_func(tam = 42):
+    return '-' * tam
+
+def func_cabecalho (txt):
+    print('\n')
+    print(linha_func())
+    print(txt.center(42))
+    print(linha_func())
+
 
 import subprocess
 
@@ -13,5 +20,3 @@ func_cabecalho('Consulta de DNS com Site')
 print('\n')
 subprocess.run(["nslookup"])
 
-dados_pc()
-print('\n')

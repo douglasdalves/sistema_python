@@ -7,12 +7,13 @@ from lib.menu_automacao import abrir_autom
 from lib.menu_aplicacao import abrir_aplic
 from lib.menu_wsl import abrir_wsl
 
+
 from variaveis.interface_config import *
 from time import sleep
 import os
 from termcolor import colored
 
-
+from funcoes import *
 from lib import *
 
 #------------------------------------------------
@@ -45,7 +46,8 @@ while True:
         os.system('cls') or None
         abrir_wsl()
     elif resposta == 7:
-        func_pull()
+        os.system('cp -r C:/scripts/comp_git/git_pull.py C:/scripts_logs')
+        os.startfile('git_pull.py')
     elif resposta == 8:
         gerar_print()
     elif resposta == 9:
