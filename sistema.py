@@ -16,6 +16,8 @@ from termcolor import colored
 from funcoes import *
 from lib import *
 
+myfile_cp_logs = r'C:/scripts_logs'
+
 #------------------------------------------------
 #Codigo do menu principal
 
@@ -47,6 +49,7 @@ while True:
         abrir_wsl()
     elif resposta == 7:
         os.system('cp -r C:/scripts/comp_git/git_pull.py C:/scripts_logs')
+        os.chdir(myfile_cp_logs)
         os.startfile('git_pull.py')
     elif resposta == 8:
         gerar_print()

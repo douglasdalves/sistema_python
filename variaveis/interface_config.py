@@ -8,6 +8,7 @@ import getpass
 
 import pyautogui
 from time import sleep
+from tqdm import tqdm
 
 #------------------------------------------------
 # variaveis
@@ -21,6 +22,7 @@ myfile_local_captura = r'C:/scripts_logs/captura'
 LOG_FILENAME = datetime.now().strftime('Print_aplic_%d_%m_%Y_%H_%M_%S.png')
 
 myfile_bkp_pip = r'C:/scripts_logs/info_pacotes/backupPIP_python.txt'
+
 
 #--------------------------------------------
 # variaveis das funcoes conexao

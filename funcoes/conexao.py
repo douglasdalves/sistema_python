@@ -3,12 +3,14 @@
 
 import os
 import subprocess
+import requests
 from termcolor import colored
 from variaveis.interface_config import *
 
 
 #------------------------------------------------
 # testes via curl
+
 
 def test_conexao():
     print('\n')
@@ -19,14 +21,18 @@ def test_conexao():
 def alexa_conexao():
     print('\n')
     print('HTTP Status Code da Alexa:')
-    os.system('curl --write-out %{http_code} --silent --output /dev/null https://alexa.amazon.com.br/spa/index.html')
+    requisicao_alexa = requests.get("https://alexa.amazon.com.br/spa/index.html")
+    print(requisicao_alexa)
+    #os.system('curl --write-out %{http_code} --silent --output /dev/null https://alexa.amazon.com.br/spa/index.html')
     print('\n')
 
 
 def roteador_conexao():
     print('\n')
     print('HTTP Status do Roteador:')
-    os.system('curl --write-out %{http_code} --silent --output /dev/null http://192.168.8.1/')
+    requesicao_tplink = requests.get("http://192.168.8.1/")
+    print(requesicao_tplink)
+    #os.system('curl --write-out %{http_code} --silent --output /dev/null http://192.168.8.1/')
     print('\n')
 
 #------------------------------------------------

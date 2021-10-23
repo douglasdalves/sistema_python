@@ -15,7 +15,7 @@ def func_pull():
 
     #os.chdir('C:')
 
-    os.system('git pull https://github.com/douglasdalves/sistema_python.git scripts')
+    os.system('git clone https://github.com/douglasdalves/sistema_python.git scripts')
     time.sleep(10)
 
     print('\n')
@@ -23,7 +23,8 @@ def func_pull():
     print('\n')
     os.chdir(myfile_sistema)
     os.system('git log --oneline')
-    os.startfile(sistema.py)
+    #import sistema
+    subprocess.run("sistema.py", shell=True)
 
 #---------------------------------------------------
 
