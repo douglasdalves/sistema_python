@@ -35,10 +35,13 @@ ping_alexa = '192.168.8.107'
 ping_plug1 = '192.168.8.108'
 ping_plug2 = '192.168.8.109'
 ping_lampada = '192.168.8.110'
+ping_controle = '192.168.8.111'
+ping_sonoff1 = '192.168.8.112'
 
 ping_acer = '192.168.8.101'
 ping_not_mor = '192.168.8.102'
 ping_pc = '192.168.8.106'
+ping_dell = '192.168.8.113'
 
 ping_mi9 = '192.168.8.104'
 ping_mi8 = '192.168.8.105'
@@ -138,25 +141,28 @@ def funcao_sair():
 #--------------------------------------------
 #('Configuracoes do menu inicial')
 
+
+#print(colored(txt.center(42), 'red', attrs=['bold']))
+
 def linha(tam = 42): ## usado por outros menus
     return '-' * tam
 
 def cabecalho_sup (txt):
     print(linha())
-    print(txt.center(55))
+    print(colored(txt.center(42),'cyan',attrs=['bold']))
     print(linha())
 
 def cabecalho_inf (txt):
     print(linha())
-    print(txt.center(50))
+    print(colored(txt.center(42),'green'))
 
 def menu(lista):
-    cabecalho_sup(colored('MENU PRINCIPAL','cyan',attrs=['bold']))
+    cabecalho_sup('MENU PRINCIPAL')
     c = 1
     for item in lista:
         print(f'{c} - {item}')
         c += 1
-    cabecalho_inf(colored('Escolha uma Opção','green'))
+    cabecalho_inf('Escolha uma Opção')
     print(linha())
     opc = leiaInt("\nSua Opção: ")
     return opc
@@ -170,7 +176,7 @@ def menu(lista):
 
 def cabeçalho (txt):
     print(linha())
-    print(txt.center(42))
+    print(colored(txt.center(42),'magenta'))
     print(linha())
 
 def menu_secund(lista):

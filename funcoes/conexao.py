@@ -23,7 +23,6 @@ def alexa_conexao():
     print('HTTP Status Code da Alexa:')
     requisicao_alexa = requests.get("https://alexa.amazon.com.br/spa/index.html")
     print(requisicao_alexa)
-    #os.system('curl --write-out %{http_code} --silent --output /dev/null https://alexa.amazon.com.br/spa/index.html')
     print('\n')
 
 
@@ -32,7 +31,6 @@ def roteador_conexao():
     print('HTTP Status do Roteador:')
     requesicao_tplink = requests.get("http://192.168.8.1/")
     print(requesicao_tplink)
-    #os.system('curl --write-out %{http_code} --silent --output /dev/null http://192.168.8.1/')
     print('\n')
 
 #------------------------------------------------
@@ -61,8 +59,12 @@ def ping_smarthome():
     subprocess.run(["ping", "-n", "4", ping_plug1])
     func_cabecalho('Smart plug 2')
     subprocess.run(["ping", "-n", "4", ping_plug2])
+    func_cabecalho('Smart Controle wi-fi')
+    subprocess.run(["ping", "-n", "4", ping_controle])
     func_cabecalho('Smart Lampada')
     subprocess.run(["ping", "-n", "4", ping_lampada])
+    func_cabecalho("Interupator Sonoff")
+    subprocess.run(["ping", "-n", "4", ping_sonoff1])
     dados_pc()
 
 
@@ -73,6 +75,8 @@ def ping_not():
     subprocess.run(["ping", "-n", "4", ping_acer])
     func_cabecalho('Notebook Marcia')
     subprocess.run(["ping", "-n", "4", ping_not_mor])
+    func_cabecalho('Notebook Compass.uol')
+    subprocess.run(["ping", "-n", "4", ping_dell])
     dados_pc()
 
 def ping_telefones():

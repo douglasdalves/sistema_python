@@ -13,8 +13,9 @@ def linha_info(tam = 42):
 
 def cabecalho_info(txt):
     print(linha_info())
-    print(txt.center(42))
+    print(colored(txt.center(42), 'red', attrs=['bold']))
     print(linha_info())
+
 
 #------------------------------------------------
 # infos de hardware
