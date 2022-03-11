@@ -84,6 +84,7 @@ echo -----------------------------------------
 echo.
 echo 2 - Itens relacionados para instalacao:
 echo pyautogui - pillow - selenium - termcolor
+echo requests - tqdm
 echo.
 echo 2.1 - Vou listar os itens ativados:
 echo.

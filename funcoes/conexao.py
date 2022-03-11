@@ -15,15 +15,19 @@ from variaveis.interface_config import *
 def test_conexao():
     print('\n')
     print('HTTP Status Code da Pagina speedtest.net')
-    os.system('curl --write-out %{http_code} --silent --output /dev/null https://www.speedtest.net/pt')
+    #os.system('curl --write-out %{http_code} --silent --output /dev/null https://www.speedtest.net/pt')
+    requisicao_speedtest = requests.get("https://www.speedtest.net/pt")
+    print(requisicao_speedtest)
 
 
 def alexa_conexao():
     print('\n')
     print('HTTP Status Code da Alexa:')
-    requisicao_alexa = requests.get("https://alexa.amazon.com.br/spa/index.html")
-    print(requisicao_alexa)
-    print('\n')
+    #requisicao_alexa = requests.get("https://alexa.amazon.com.br/spa/index.html")
+    requisicao_echo3 = requests.get("https://alexa.amazon.com.br/spa/index.html?#settings/device/G0911W110342050A")
+    requisicao_echo4 = requests.get("https://alexa.amazon.com.br/spa/index.html?#settings/device/G091AA1220270BJ6")
+    print(requisicao_echo3, 'Echo Escritorio')
+    print(requisicao_echo4, 'Echo Sala')
 
 
 def roteador_conexao():
@@ -54,7 +58,7 @@ def ping_smarthome():
     subprocess.run(["ping", "-n", "4", ping_tv])
     func_cabecalho('Echo Dot - Alexa')
     alexa_conexao()
-    subprocess.run(["ping", "-n", "4", ping_alexa])
+    #subprocess.run(["ping", "-n", "4", ping_alexa])
     func_cabecalho('Smart plug 1')
     subprocess.run(["ping", "-n", "4", ping_plug1])
     func_cabecalho('Smart plug 2')
@@ -89,6 +93,6 @@ def ping_telefones():
 
 def ping_desktop():
     os.system('cls') or None
-    func_cabecalho('Teste Desktop WI-FI')
+    func_cabecalho('Desktop Escritorio')
     subprocess.run(["ping", "-n", "4", ping_pc])
     dados_pc()

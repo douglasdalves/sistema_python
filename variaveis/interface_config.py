@@ -32,11 +32,14 @@ ping_roteador = '192.168.8.1'
 ping_tv = '192.168.8.103'
 
 ping_alexa = '192.168.8.107'
+ping_dot4 = '192.168.8.114'
+
 ping_plug1 = '192.168.8.108'
 ping_plug2 = '192.168.8.109'
+ping_sonoff1 = '192.168.8.112'
+
 ping_lampada = '192.168.8.110'
 ping_controle = '192.168.8.111'
-ping_sonoff1 = '192.168.8.112'
 
 ping_acer = '192.168.8.101'
 ping_not_mor = '192.168.8.102'
@@ -55,9 +58,10 @@ def linha_func(tam = 42):
 
 def func_cabecalho (txt):
     print('\n')
-    print(linha_func())
+    print(colored(linha_func(), 'green'))
     print(txt.center(42))
-    print(linha_func())
+    print(colored(linha_func(), 'green'))
+
 
 #--------------------------------------------
 # configuracao dados da maquina

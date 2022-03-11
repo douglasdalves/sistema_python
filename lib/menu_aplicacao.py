@@ -4,7 +4,7 @@
 from platform import python_branch
 from variaveis.interface_config import *
 from funcoes.conexao import *
-#from funcoes.browserbot import *
+#from funcoes.browserbot_test import consulta_speed
 from time import sleep
 import os
 
@@ -23,7 +23,7 @@ import os
 
 myfile="C:/scripts/funcoes/conexao_seanet.py"
 myfile_browser = r'C:/scripts/funcoes/browserbot.py'
-
+myfile_browser1 = r'C:/scripts/funcoes/browserbot_test.py'
 
 
 #------------------------------------------------
@@ -36,6 +36,7 @@ def abrir_aplic():
             os.system('cls') or None
             print('Opcao 1 - Abrindo o navegor padrao')
             test_conexao()
+            #os.startfile(myfile_browser1)
             os.startfile(myfile_browser)
             print('\n')
         elif resposta == 2:
