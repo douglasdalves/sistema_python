@@ -8,8 +8,7 @@ myfile_sistema = r'C:/scripts'
 #---------------------------------------------------
 
 def func_pull():
-    print('Baixando os dados do repositorio')
-    print('\n')
+    print('Baixando os dados do repositorio', '\n')
     os.system('rm -rf scripts')
     print('\n')
 

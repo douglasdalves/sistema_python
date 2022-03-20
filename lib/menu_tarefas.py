@@ -14,38 +14,47 @@ import os
 myfile_bkp_sistema = r'C:/scripts/funcoes_tarefas/backup_sistema.py'
 myfile_programas = r'C:/scripts/funcoes_tarefas/instal_programas.bat'
 
+# Dados menu
+t_menu = 'Pacotes do Python'
+t_menu1 = 'GitHub'
+t_menu2 = 'DevOps'
+t_menu3 = 'Variavel Ambiente'
+t_menu4 = 'Install Programas'
+t_menu5 = 'Backup Particao'
+
+
 #------------------------------------------------
-#Codigo do menu 5
+#Codigo do menu 2
 
 def abrir_taref():
     while True:
-        resposta = menu_secund(['Pacotes do Python','GitHub','DevOps','Variavel Ambiente','Install Programas','Backup Particao','Captura de Tela','Retornar ao Home'])
+        resposta = menu_secund([t_menu,t_menu1,t_menu2,t_menu3,t_menu4,t_menu5,opcao_captura,opcao_retorno])
         if resposta == 1:
             os.system('cls') or None
-            print('Opcao 1 - Info de Pacotes')
+            print('{}'.format(op1), 'Info de Pacotes')
             exec(open("./funcoes_tarefas/pacotes_detalhes.py").read())
         elif resposta == 2:
-            print('Opcao 2 - Infos em GitHub')
+            print('{}'.format(op2), 'Infos em GitHub')
             os.system('cls') or None
             exec(open("./comp_git/git_test.py").read())
         elif resposta == 3:
-            print('Opcao 3 - Infos em DevOps')
+            print('{}'.format(op3), 'Infos em DevOps')
             os.system('cls') or None
             func_devops()
         elif resposta == 4:
-            print('Opcao 4 - Variaveis de Ambiente')
+            print('{}'.format(op4), 'Variaveis de Ambiente')
             os.system('cls') or None
             exec(open("./funcoes_tarefas/func_variavel.py").read())
         elif resposta == 5:
-            print('Opcao 5 - Instacao de Progrmas via CHOCO')
+            print('{}'.format(op5), 'Instacao de Progrmas via CHOCO')
             os.system('cls') or None
             os.startfile(myfile_programas)
         elif resposta == 6:
-            print('Opcao 6 - test2')
+            print('{}'.format(op6), 'test2')
             os.system('cls') or None
             exec(open(myfile_bkp_sistema).read())
         elif resposta == 7:
-            print('Opcao 7 - Captura de Tela')
+            print('{}'.format(op7), 'Captura de Tela')
             gerar_print()
         elif resposta == 8:
             frase_retorno()

@@ -26,22 +26,20 @@ def cabecalho_git (txt):
 # Aplicar alteracoes
 
 def func_commit():
-    espaco
+    print('\n')
     os.system('git checkout dev')
-    espaco
+    print('\n')
     print('Certo vou aplicar o git add .')
     os.system('git add .')
-    espaco
-    print('Agora precisa commitar, digite abaixo..')
-    print('ex: git commit -m "msg"')
-    espaco
+    print('\n')
+    print(colored('Agora precisa commitar, digite abaixo..', 'red'))
+    print('ex: git commit -m "msg"', '\n')
     os.system(input())
-    espaco
+    print('\n')
     git_oneline
 
 def func_server():
-    print('Enviando ao Servidor local')
-    print('\n')
+    print('Enviando ao Servidor local', espaco)
     os.system('git checkout master')
     print(colored('Voce esta na branch:', 'blue', attrs=['bold']))
     os.system('git branch')
@@ -60,8 +58,7 @@ def func_server():
     os.system('git checkout dev')
 
 def func_github():
-    print('\n')
-    print('Enviando dados ao Git Hub')
+    print('\n', 'Enviando dados ao Git Hub')
     os.chdir('C:\sistema_git') #Altere o diretório de trabalho atual
     print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
     print('\n')

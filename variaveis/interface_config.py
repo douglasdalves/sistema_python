@@ -77,13 +77,10 @@ def dados_pc():
     user = getpass.getuser()
     text_user = colored('Usuario do Sistema:', 'blue', attrs=['bold'])
 
-    print('\n')
-    print('--------- Testes Concluidos ---------')
+    print('\n', '--------- Testes Concluidos ---------')
     print(f'{text_data} {data_e_hora_em_texto}')
     print(f'{text_cpu} {cpu}')
-    print(f'{text_user} {user}')
-    print('\n')
-
+    print(f'{text_user} {user}', '\n')
 
 
 #-----------------------------------------------------
@@ -96,9 +93,19 @@ def dados_pc():
 #---%H - A hora representada por um número decimal usando um relógio de 24 horas (de 00 a 23)
 #---%M - O minuto representado por um número decimal (de 00 a 59)
 
+
+
 #-----------------------------------------------------
+# Dados dos Menus (opcao)
 
-
+op1 = 'Opcao 1 - '
+op2 = 'Opcao 2 - '
+op3 = 'Opcao 3 - '
+op4 = 'Opcao 4 - '
+op5 = 'Opcao 5 - '
+op6 = 'Opcao 6 - '
+op7 = 'Opcao 7 - '
+op8 = 'Opcao 8 - '
 
 #--------------------------------------------
 ## configuracoes das mensagens
@@ -123,24 +130,45 @@ def leia_opcao():
 ## configuracoes das opcoes
 
 
+#----# Captura de tela (print)
+opcao_captura = colored('Captura de Tela', 'red')
+
 def gerar_print():
-    print('\n')
-    print('-- Captura de Tela -- ')
-    print('Print gerado em Scripts_logs')
-    print('\n')
+    print('\n', '-- Captura de Tela -- ')
+    print('Print gerado em Scripts_logs', '\n')
     capturar = pyautogui.screenshot()
     capturar.save(myfile_captura)
     os.chdir(myfile_local_captura)
     os.rename('print_sistema.png', LOG_FILENAME)
-    #subprocess.call(myfile_print, shell=True)
 
 
+#---# ('Retornando para o menu principal')
+
+#frase_retorno = 'Retornando para o menu principal'
+fra1 = colored('Retornando para o menu principal', 'yellow', attrs=['bold'])
+
+def retorno (txt):
+    print(linha())
+    print(txt.center(53))
+    print(linha())
+    print('\n')
+
+opcao_retorno = colored('Retornar ao Home', 'blue')
+
+def frase_retorno():
+    os.system('cls') or None
+    retorno('{}'.format(fra1))
+    exec(open("sistema.py").read())
+
+
+#---# funcao sair
 def funcao_sair():
     print('\n')
     cabecalho_sup('Saindo do sistema... Até logo')
     print('\n')
     sleep(2)
     exec(open(myfile_saindo).read())
+
 
 #--------------------------------------------
 #('Configuracoes do menu inicial')
@@ -195,19 +223,3 @@ def menu_secund(lista):
 
 
 #--------------------------------------------
-#('Retornando para o menu principal')
-
-
-#frase_retorno = 'Retornando para o menu principal'
-fra1 = colored('Retornando para o menu principal', 'yellow', attrs=['bold'])
-
-def retorno (txt):
-    print(linha())
-    print(txt.center(53))
-    print(linha())
-    print('\n')
-
-def frase_retorno():
-    os.system('cls') or None
-    retorno('{}'.format(fra1))
-    exec(open("sistema.py").read())

@@ -19,11 +19,19 @@ import os
 ##########
 
 #------------------------------------------------
-# 
-
+#
+# Variavel de links
 myfile="C:/scripts/funcoes/conexao_seanet.py"
 myfile_browser = r'C:/scripts/funcoes/browserbot.py'
 myfile_browser1 = r'C:/scripts/funcoes/browserbot_test.py'
+
+# Dados menu
+t_menu = 'Abrir o Chrome para testes'
+t_menu1 = 'Ping da Conexao'
+t_menu2 = 'Conectividade - Smart home'
+t_menu3 = 'Conectividade - Notebooks'
+t_menu4 = 'Conectividade - Smartphones'
+t_menu5 = 'Conectividade - Desktop'
 
 
 #------------------------------------------------
@@ -31,10 +39,10 @@ myfile_browser1 = r'C:/scripts/funcoes/browserbot_test.py'
 
 def abrir_aplic():
     while True:
-        resposta = menu_secund(['Abrir o Chrome para testes','Ping da Conexao','Conectividade - Smart home','Conectividade - Notebooks','Conectividade - Smartphones','Conectividade - Desktop','Captura de Tela','Retornar ao Home'])
+        resposta = menu_secund([t_menu,t_menu1,t_menu2,t_menu3,t_menu4,t_menu5,opcao_captura,opcao_retorno])
         if resposta == 1:
             os.system('cls') or None
-            print('Opcao 1 - Abrindo o navegor padrao')
+            print('{}'.format(op1), 'Abrindo o navegor padrao')
             test_conexao()
             #os.startfile(myfile_browser1)
             os.startfile(myfile_browser)
@@ -43,19 +51,19 @@ def abrir_aplic():
             os.system('cls') or None
             #os.system('start ./funcoes/conexao_seanet.py')
         elif resposta == 3:
-            print('Opcao 3 - Testar conectividade dos Smart homes')
+            print('{}'.format(op3), 'Testar conectividade dos Smart homes')
             ping_smarthome()
         elif resposta == 4:
-            print('Opcao 4 - Testar a conectividade dos Notebooks')
+            print('{}'.format(op4), 'Testar a conectividade dos Notebooks')
             ping_not()
         elif resposta == 5:
-            print('Opcao 5 - Testar a conectividade dos Smartphones')
+            print('{}'.format(op5), 'Testar a conectividade dos Smartphones')
             ping_telefones()
         elif resposta == 6:
-            print('Opcao 6 - Testar a conectividade do Desktop')
+            print('{}'.format(op6), 'Testar a conectividade do Desktop')
             ping_desktop()
         elif resposta == 7:
-            print('Opcao 7 - Captura de Tela')
+            print('{}'.format(op7), 'Captura de Tela')
             gerar_print()
         elif resposta == 8:
             frase_retorno()
