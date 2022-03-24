@@ -7,6 +7,8 @@ pyautogui.PAUSE = 1
 
 #-----------------------------------
 
+pyautogui.alert("O código em pyautogui será executado, não use..")
+
 ## abrindo o navegador
 pyautogui.press("win")
 pyautogui.write("chrome")
@@ -26,32 +28,32 @@ time.sleep(1)
 
 
 ## nova aba do navegador
-pyautogui.hotkey("ctrl", "t")
-link = "https://www.dimepkairos.com.br"
-pyperclip.copy(link)
-## add conteudo do kairos - link
-pyautogui.hotkey("ctrl", "v")
-pyautogui.press("enter")
-time.sleep(5)
-pyautogui.click(x=1318, y=167)
-pyautogui.press("enter")
-time.sleep(17)
-pyautogui.click(x=2459, y=131)
-pyautogui.click(x=2481, y=162)
-pyautogui.press("enter")
-pyautogui.click(x=260, y=728)
-pyautogui.press("enter")
+# pyautogui.hotkey("ctrl", "t")
+# link = "https://www.dimepkairos.com.br"
+# pyperclip.copy(link)
+# ## add conteudo do kairos - link
+# pyautogui.hotkey("ctrl", "v")
+# pyautogui.press("enter")
+# time.sleep(5)
+# pyautogui.click(x=1318, y=167)
+# pyautogui.press("enter")
+# time.sleep(17)
+# pyautogui.click(x=2459, y=131)
+# pyautogui.click(x=2481, y=162)
+# pyautogui.press("enter")
+# pyautogui.click(x=260, y=728)
+# pyautogui.press("enter")
 
 
 ## compasso refinamento de atividades
-pyautogui.hotkey("ctrl", "t")
-link_atividades = "https://compasso.ninja/pls/interno/whsrefinamentoatividades"
-pyperclip.copy(link_atividades)
-pyautogui.hotkey("ctrl", "v")
-pyautogui.press("enter")
-pyautogui.click(x=1337, y=263)
-pyautogui.press("enter")
-time.sleep(1)
+# pyautogui.hotkey("ctrl", "t")
+# link_atividades = "https://compasso.ninja/pls/interno/whsrefinamentoatividades"
+# pyperclip.copy(link_atividades)
+# pyautogui.hotkey("ctrl", "v")
+# pyautogui.press("enter")
+# pyautogui.click(x=1337, y=263)
+# pyautogui.press("enter")
+# time.sleep(1)
 ## preenchimento
 """ pyautogui.click(x=246, y=325)
 pyautogui.press("enter")

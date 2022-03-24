@@ -5,8 +5,6 @@ from platform import python_branch
 from variaveis.interface_config import *
 from funcoes.conexao import *
 #from funcoes.browserbot_test import consulta_speed
-from time import sleep
-import os
 
 ##########
 # exemplos

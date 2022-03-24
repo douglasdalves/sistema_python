@@ -77,7 +77,7 @@ def dados_pc():
     user = getpass.getuser()
     text_user = colored('Usuario do Sistema:', 'blue', attrs=['bold'])
 
-    print('\n', '--------- Testes Concluidos ---------')
+    print('\n','\n', '--------- Testes Concluidos ---------')
     print(f'{text_data} {data_e_hora_em_texto}')
     print(f'{text_cpu} {cpu}')
     print(f'{text_user} {user}', '\n')
@@ -144,6 +144,8 @@ def gerar_print():
 
 #---# ('Retornando para o menu principal')
 
+
+
 #frase_retorno = 'Retornando para o menu principal'
 fra1 = colored('Retornando para o menu principal', 'yellow', attrs=['bold'])
 
@@ -159,7 +161,8 @@ def frase_retorno():
     os.system('cls') or None
     retorno('{}'.format(fra1))
     exec(open("sistema.py").read())
-
+    
+    
 
 #---# funcao sair
 def funcao_sair():
@@ -167,7 +170,7 @@ def funcao_sair():
     cabecalho_sup('Saindo do sistema... Até logo')
     print('\n')
     sleep(2)
-    exec(open(myfile_saindo).read())
+    os.close()
 
 
 #--------------------------------------------

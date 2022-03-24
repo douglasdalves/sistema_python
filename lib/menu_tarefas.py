@@ -4,9 +4,6 @@
 #from comp_git.git_test import func_git_test
 from funcoes_tarefas.func_devops import func_devops
 from variaveis.interface_config import *
-from time import sleep
-import os
-
 
 
 #------------------------------------------------
