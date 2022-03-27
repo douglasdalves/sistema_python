@@ -6,7 +6,7 @@ import subprocess
 import time
 
 myfile_sistema = r'C:/'
-myfile_scripts_logs = r'C:/scripts_logs/scripts/'
+myfile_scripts = r'C:/scripts'
 
 #---------------------------------------------------
 
@@ -31,7 +31,8 @@ def func_pull():
     print('Dados atualizados e copiados...', '\n')
     os.system('git log --oneline')
     #print('\n')
-    import sistema
+    os.chdir(myfile_scripts)
+    #import sistema
     subprocess.run("sistema.py", shell=True)
     time.sleep(3)
 

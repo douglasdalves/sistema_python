@@ -38,13 +38,13 @@ def func_devops():
         if aplicar == '1':
             cabecalho('Tudo bem volte quando quiser')
             break
-        if aplicar == '2':
+        elif aplicar == '2':
             dev_wsl()
             dev_docker()
             dev_vagrant()
-        if aplicar == '3':
+        elif aplicar == '3':
             dev_wsl()
-        if aplicar == '4':
+        elif aplicar == '4':
             dev_docker()
         else:
             aplicar == '5'
