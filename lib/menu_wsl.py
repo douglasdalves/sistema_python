@@ -43,6 +43,7 @@ def abrir_wsl():
         elif resposta == 2:
             os.system('cls') or None
             print('{}'.format(op2), 'Start WSL2')
+            print('\n')
             os.system('wsl ~ --distribution Ubuntu --user root')
             sleep(2)
             os.system('Start Ubuntu')

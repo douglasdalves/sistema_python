@@ -53,14 +53,11 @@ ping_mi8 = '192.168.8.105'
 #--------------------------------------------
 #('Configuracoes do menu funcoes')
 
-def linha_func(tam = 42):
-    return '-' * tam
-
 def func_cabecalho (txt):
     print('\n')
-    print(colored(linha_func(), 'green'))
+    print(colored('-' * 42, 'green'))
     print(txt.center(42))
-    print(colored(linha_func(), 'green'))
+    print(colored('-' * 42, 'green'))
 
 
 #--------------------------------------------
@@ -210,9 +207,9 @@ def menu(lista):
 #('Configuracoes dos menus secudarios')
 
 def cabeçalho (txt):
-    print(linha())
+    print('-' * 42)
     print(colored(txt.center(42),'magenta'))
-    print(linha())
+    print('-' * 42)
 
 def menu_secund(lista):
     cabeçalho('Testes secundários')
@@ -220,7 +217,7 @@ def menu_secund(lista):
     for item in lista:
         print(f'{c} - {item}')
         c += 1
-    print(linha())
+    print('-' * 42)
     opc = leiaInt("\nSua Opção: ")
     return opc
 
