@@ -1,0 +1,11 @@
+# Arquivo do webdriver
+* chromedriver.exe
+
+# testes do cache
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Nao finalizado
+janela_system.py

@@ -54,6 +54,12 @@ ping_mi8 = '192.168.8.105'
 #('Configuracoes do menu funcoes')
 
 def func_cabecalho (txt):
+    """
+    -> Realiza a personalizacão de titulo
+    : Abre uma linha de espaço
+    : Printa uma linha em verde
+    : Texto dentro das linhas
+    """
     print('\n')
     print(colored('-' * 42, 'green'))
     print(txt.center(42))
@@ -64,6 +70,12 @@ def func_cabecalho (txt):
 # configuracao dados da maquina
 
 def dados_pc():
+    """
+    -> Gera os dados de Data, Hora, Equipamento, Usuário
+    : Coleta o datatime
+    : Nome do equipamento
+    : User do windows
+    """
     data_e_hora_atuais = datetime.now()
     data_e_hora_em_texto = data_e_hora_atuais.strftime('%d/%m/%Y %H:%M')
     text_data = colored('Data e Hora do teste:', 'blue', attrs=['bold'])
@@ -108,6 +120,13 @@ op8 = 'Opcao 8 - '
 ## configuracoes das mensagens
 
 def leiaInt(msg):
+    """
+    -> Apresenta as mensagens de erro ao usar o menu incorretamente
+    : Le a entrada
+    : valida a entrada
+    : Retorna a mensagem adequada
+    : Trabalha com a cor vermelha
+    """
     while True:
         try:
             n = int(input(msg))
@@ -131,6 +150,14 @@ def leia_opcao():
 opcao_captura = colored('Captura de Tela', 'red')
 
 def gerar_print():
+    """
+    -> Trabalha com a geracao de print e salvar o mesmo
+    : Avisa sobre a captura
+    : Realiza a captura
+    : Salva no local informado
+    : Troca de diretorio
+    : Renomeia o arquivo
+    """
     print('\n', '-- Captura de Tela -- ')
     print('Print gerado em Scripts_logs', '\n')
     capturar = pyautogui.screenshot()
@@ -140,8 +167,6 @@ def gerar_print():
 
 
 #---# ('Retornando para o menu principal')
-
-
 
 #frase_retorno = 'Retornando para o menu principal'
 fra1 = colored('Retornando para o menu principal', 'yellow', attrs=['bold'])
@@ -163,6 +188,13 @@ def frase_retorno():
 
 #---# funcao sair
 def funcao_sair():
+    """
+    -> Funcao de sair da aplicacao do python
+    : Abre espaco antes e depois da mensagem
+    : Mensagem de aviso
+    : Time para visualizar o processo
+    : Parametro de sair - closed
+    """
     print('\n')
     cabecalho_sup('Saindo do sistema... Até logo')
     print('\n')

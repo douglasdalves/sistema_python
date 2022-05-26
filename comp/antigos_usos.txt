@@ -66,3 +66,11 @@ gerar_dados(){
 gerar_dados
 
 ##--------------------------------------------------
+
+import platform
+
+
+print(platform.system())
+print(platform.version())
+print(platform.node())
+print(platform.processor())
