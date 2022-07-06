@@ -73,6 +73,9 @@ pip install requests
 echo.
 REM biblioteca para barra de progresso
 pip install tqdm
+REM usar no get_account aws
+pip install boto3
+echo.
 REM proporciona formatação ANSII e permite a saída de cores no terminal
 REM ativar a cor do pacote
 reg add HKEY_CURRENT_USER\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x00000001 /f
