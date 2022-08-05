@@ -33,7 +33,8 @@ def func_devops():
         [3] Dados WSL
         [4] Dados Docker
         [5] Dados AWS cli
-        [6] Dados Vagrant''')
+        [6] Dados Vagrant
+        [7] Abrir o vsCode''')
         print('\n')
         aplicar = str(input('Digite uma opcao? '))
         if aplicar == '1':
@@ -49,9 +50,11 @@ def func_devops():
             dev_docker()
         elif aplicar == '5':
             aws_cli()
-        else:
-            aplicar == '6'
+        elif aplicar == '6':
             dev_vagrant()
+        else:
+            aplicar == '7'
+            os.system('code .')
 
 
 
@@ -104,3 +107,5 @@ def aws_cli():
     os.system('aws configure list')
     print('\n')
     print(colored('{}'.format(f10), 'blue', attrs=['bold']), '\n')
+    os.system('aws configure list-profiles')
+    print('\n')
