@@ -27,7 +27,7 @@ def cabecalho_git (txt):
 
 def func_commit():
     print('\n')
-    os.system('git checkout dev')
+    os.system('git branch')
     print('\n')
     print('Certo vou aplicar o git add .')
     os.system('git add .')
@@ -38,34 +38,16 @@ def func_commit():
     print('\n')
     git_oneline
 
-def func_server():
-    print('Enviando ao Servidor local', espaco)
-    os.system('git checkout master')
-    print(colored('Voce esta na branch:', 'blue', attrs=['bold']))
-    os.system('git branch')
-    print('\n')
-    os.system('git merge dev')
-    os.system('git push server_sistema master')
-    print('\n')
-    os.system('git log --oneline')
-    print('\n')
-    os.chdir('C:\sistema_git') #Altere o diretório de trabalho atual
-    print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
-    os.system('git log --oneline')
-    os.chdir('C:\scripts')
-    print('\n')
-    os.system('git log --oneline')
-    os.system('git checkout dev')
 
 def func_github():
     print('\n', 'Enviando dados ao Git Hub')
-    os.chdir('C:\sistema_git') #Altere o diretório de trabalho atual
-    print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
+    #os.chdir('C:\sistema_git') #Altere o diretório de trabalho atual
+    #print ("Voce esta em: %s" % os.getcwd()) #Retorna o diretório de trabalho atual
     print('\n')
     os.system('git log --oneline')
     print('\n')
     os.system('git push https://github.com/douglasdalves/sistema_python.git master')
     print('\n')
-    os.chdir('C:\scripts')
-    print ("Voce esta em: %s" % os.getcwd())
+    #os.chdir('C:\scripts')
+    #print ("Voce esta em: %s" % os.getcwd())
     print(colored('Processo Concluido, verifique no GitHub.', 'green', attrs=['bold']))

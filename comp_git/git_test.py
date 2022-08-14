@@ -37,7 +37,7 @@ while True:
     if aplicar == '1':
         func_commit()
     elif aplicar == '2':
-        func_server()
+        print(espaco)
     elif aplicar == '3':
         func_github()
     else:

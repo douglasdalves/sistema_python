@@ -37,8 +37,12 @@ ping_dot4 = '192.168.8.114'
 ping_plug1 = '192.168.8.108'
 ping_plug2 = '192.168.8.109'
 ping_sonoff1 = '192.168.8.112'
+ping_sonoff2 = '192.168.8.116'
 
 ping_lampada = '192.168.8.110'
+ping_lampada2 = '192.168.8.115'
+ping_fita_led = '192.168.8.117'
+
 ping_controle = '192.168.8.111'
 
 ping_acer = '192.168.8.101'
