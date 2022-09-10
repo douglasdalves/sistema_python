@@ -44,8 +44,10 @@ def ping_smarthome():
     r[subprocess.run(["ping", "-n", "4", ping_controle])] = func_cabecalho('Smart Controle wi-fi')
     r[subprocess.run(["ping", "-n", "4", ping_lampada])] = func_cabecalho('Smart Lampada')
     r[subprocess.run(["ping", "-n", "4", ping_lampada2])] = func_cabecalho('Smart Lampada 2')
+    r[subprocess.run(["ping", "-n", "4", ping_fita_led])] = func_cabecalho("Smart Fita RGB")
     r[subprocess.run(["ping", "-n", "4", ping_sonoff1])] = func_cabecalho("Interupator Sonoff")
     r[subprocess.run(["ping", "-n", "4", ping_sonoff2])] = func_cabecalho("Interupator Sonoff 2")
+    r[subprocess.run(["ping", "-n", "4", ping_robo_aspirador])] = func_cabecalho("Robo Aspirador")
     dados_pc()
 
 

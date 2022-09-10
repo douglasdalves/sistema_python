@@ -31,14 +31,12 @@ os.system('git log --oneline')
 # Aplicar alteracoes
 
 while True:
-    cabecalho_git('Funcoes: 1-Commit  2-Enviar_Server 3-GitHub')
+    cabecalho_git('Funcoes: 1-Commit 2-GitHub')
     print('Opcao para sair, digite: Nao')
     aplicar = str(input('Voce quer realizar as alteracoes? '))
     if aplicar == '1':
         func_commit()
     elif aplicar == '2':
-        print(espaco)
-    elif aplicar == '3':
         func_github()
     else:
         aplicar == 'nao'

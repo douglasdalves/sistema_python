@@ -28,8 +28,7 @@ def cabecalho_git (txt):
 def func_commit():
     print('\n')
     os.system('git branch')
-    print('\n')
-    print('Certo vou aplicar o git add .')
+    print('\nCerto vou aplicar o git add .')
     os.system('git add .')
     print('\n')
     print(colored('Agora precisa commitar, digite abaixo..', 'red'))
