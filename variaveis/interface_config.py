@@ -46,8 +46,7 @@ ping_fita_led = '192.168.8.118'
 ping_controle = '192.168.8.111'
 ping_robo_aspirador = '192.168.8.117'
 
-ping_acer = '192.168.8.101'
-ping_not_mor = '192.168.8.102'
+ping_not = '192.168.8.102'
 ping_pc = '192.168.8.106'
 ping_dell = '192.168.8.113'
 

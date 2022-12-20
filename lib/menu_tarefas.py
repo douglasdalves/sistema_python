@@ -4,6 +4,7 @@
 #from comp_git.git_test import func_git_test
 from funcoes_tarefas.func_devops import func_devops
 from variaveis.interface_config import *
+from comp_git.git_test import *
 
 
 #------------------------------------------------
@@ -33,7 +34,7 @@ def abrir_taref():
         elif resposta == 2:
             print('{}'.format(op2), 'Infos em GitHub')
             os.system('cls') or None
-            exec(open("./comp_git/git_test.py").read())
+            notas_git()
         elif resposta == 3:
             print('{}'.format(op3), 'Infos em DevOps')
             os.system('cls') or None
