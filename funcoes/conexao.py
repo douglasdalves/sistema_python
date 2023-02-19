@@ -54,8 +54,9 @@ def ping_smarthome():
 def ping_not():
     os.system('cls') or None
     r = dict()
-    r[subprocess.run(["ping", "-n", "4", ping_not])] = func_cabecalho('Notebook Marcia')
-    r[subprocess.run(["ping", "-n", "4", ping_dell])] = func_cabecalho('Notebook Compass.uol')
+    r[subprocess.run(["ping", "-n", "4", ping_not])] = func_cabecalho('Notebook Acer-V5')
+    r[subprocess.run(["ping", "-n", "4", ping_not_5g])] = func_cabecalho('Notebook Acer-V5-5G')
+    r[subprocess.run(["ping", "-n", "4", ping_dell])] = func_cabecalho('Notebook Working')
     dados_pc()
 
 
@@ -71,4 +72,11 @@ def ping_desktop():
     os.system('cls') or None
     r = dict()
     r[subprocess.run(["ping", "-n", "4", ping_pc])] = func_cabecalho('Desktop Escritorio')
+    dados_pc()
+
+
+def ping_equipamentos():
+    os.system('cls') or None
+    r = dict()
+    r[subprocess.run(["ping", "-n", "4", ping_kindle])] = func_cabecalho('Amazom Kindle')
     dados_pc()

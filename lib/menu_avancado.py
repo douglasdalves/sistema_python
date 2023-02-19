@@ -9,8 +9,8 @@ import os
 #------------------------------------------------
 #Linhas de personalizacao
 
-myfile_dns = r'C:/scripts/funcoes/consulta_dns.py'
-myfile_netstat = r'C:/scripts/funcoes/netstat_rede.py'
+myfile_dns = r'C:/sistema_python/funcoes/consulta_dns.py'
+myfile_netstat = r'C:/sistema_python/funcoes/netstat_rede.py'
 
 # Dados menu
 t_menu = 'TraceRouter e Pathping'

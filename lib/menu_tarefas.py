@@ -9,8 +9,8 @@ from comp_git.git_test import *
 
 #------------------------------------------------
 
-myfile_bkp_sistema = r'C:/scripts/funcoes_tarefas/backup_sistema.py'
-myfile_programas = r'C:/scripts/funcoes_tarefas/instal_programas.bat'
+myfile_bkp_sistema = r'C:/sistema_python/funcoes_tarefas/backup_sistema.py'
+myfile_programas = r'C:/sistema_python/funcoes_tarefas/instal_programas.bat'
 
 # Dados menu
 t_menu = 'Pacotes do Python'

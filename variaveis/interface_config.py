@@ -15,7 +15,7 @@ from tqdm import tqdm
 
 espaco = print('\n')
 
-myfile_saindo = r'C:/scripts/funcoes/saindo_sistema.py'
+myfile_saindo = r'C:/sistema_python/funcoes/saindo_sistema.py'
 
 myfile_captura = r'C:/scripts_logs/captura/print_sistema.png'
 myfile_local_captura = r'C:/scripts_logs/captura'
@@ -29,7 +29,9 @@ myfile_bkp_pip = r'C:/scripts_logs/info_pacotes/backupPIP_python.txt'
 
 ping_seanet = '186.251.248.1'
 ping_roteador = '192.168.8.1'
+
 ping_tv = '192.168.8.103'
+ping_kindle = '192.168.8.119'
 
 ping_alexa = '192.168.8.107'
 ping_dot4 = '192.168.8.114'
@@ -46,6 +48,7 @@ ping_fita_led = '192.168.8.118'
 ping_controle = '192.168.8.111'
 ping_robo_aspirador = '192.168.8.117'
 
+ping_not_5g = '192.168.8.101'
 ping_not = '192.168.8.102'
 ping_pc = '192.168.8.106'
 ping_dell = '192.168.8.113'
@@ -119,6 +122,8 @@ op5 = 'Opcao 5 - '
 op6 = 'Opcao 6 - '
 op7 = 'Opcao 7 - '
 op8 = 'Opcao 8 - '
+op9 = 'Opcao 8 - '
+op10 = 'Opcao 8 - '
 
 #--------------------------------------------
 ## configuracoes das mensagens

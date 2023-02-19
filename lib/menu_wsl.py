@@ -10,10 +10,10 @@ from time import sleep
 #------------------------------------------------
 #Linhas de personalizacao
 
-myfile_docker = r'C:/scripts/automacao_sh/wsl_start_docker.sh'
-myfile_stop = r'C:/scripts/automacao_sh/wsl_stop_docker.sh'
+myfile_docker = r'C:/sistema_python/automacao_sh/wsl_start_docker.sh'
+myfile_stop = r'C:/sistema_python/automacao_sh/wsl_stop_docker.sh'
 
-myfile_docker1 = r'C:/scripts/automacao_sh'
+myfile_docker1 = r'C:/sistema_python/automacao_sh'
 
 #------------------------------------------------
 # funções

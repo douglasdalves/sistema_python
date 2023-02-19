@@ -19,9 +19,9 @@ from funcoes.conexao import *
 #------------------------------------------------
 #
 # Variavel de links
-myfile="C:/scripts/funcoes/conexao_seanet.py"
-myfile_browser = r'C:/scripts/funcoes/browserbot.py'
-myfile_browser1 = r'C:/scripts/funcoes/browserbot_test.py'
+myfile="C:/sistema_python/funcoes/conexao_seanet.py"
+myfile_browser = r'C:/sistema_python/funcoes/browserbot.py'
+myfile_browser1 = r'C:/sistema_python/funcoes/browserbot_test.py'
 
 # Dados menu
 t_menu = 'Abrir o Chrome para testes'
@@ -30,6 +30,7 @@ t_menu2 = 'Conectividade - Smart home'
 t_menu3 = 'Conectividade - Notebooks'
 t_menu4 = 'Conectividade - Smartphones'
 t_menu5 = 'Conectividade - Desktop'
+t_menu6 = 'Conectividade - Equipamentos'
 
 
 #------------------------------------------------
@@ -37,7 +38,7 @@ t_menu5 = 'Conectividade - Desktop'
 
 def abrir_aplic():
     while True:
-        resposta = menu_secund([t_menu,t_menu1,t_menu2,t_menu3,t_menu4,t_menu5,opcao_captura,opcao_retorno])
+        resposta = menu_secund([t_menu,t_menu1,t_menu2,t_menu3,t_menu4,t_menu5,t_menu6,opcao_captura,opcao_retorno])
         if resposta == 1:
             os.system('cls') or None
             print('{}'.format(op1), 'Abrindo o navegor padrao')
@@ -61,9 +62,12 @@ def abrir_aplic():
             print('{}'.format(op6), 'Testar a conectividade do Desktop')
             ping_desktop()
         elif resposta == 7:
-            print('{}'.format(op7), 'Captura de Tela')
-            gerar_print()
+            print('{}'.format(op7), 'Testar a conectividade Equipamentos')
+            ping_equipamentos()
         elif resposta == 8:
+            print('{}'.format(op8), 'Captura de Tela')
+            gerar_print()
+        elif resposta == 9:
             frase_retorno()
         else:
             leia_opcao()

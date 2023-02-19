@@ -55,7 +55,7 @@ while True:
         os.system('cls') or None
         abrir_wsl()
     elif resposta == 7:
-        os.system('cp -r C:/scripts/comp_git/git_pull.py C:/scripts_logs')
+        os.system('cp -r C:/sistema_python/comp_git/git_pull.py C:/scripts_logs')
         os.chdir(myfile_cp_logs)
         os.startfile('git_pull.py')
     elif resposta == 8:
