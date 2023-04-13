@@ -2,12 +2,8 @@
 * chromedriver.exe
 
 # testes do cache
-comp/__pycache__/
-comp_git/__pycache__/
-funcoes/__pycache__/
-funcoes_tarefas/__pycache__/
-lib/__pycache__/
-variaveis/__pycache__/
+*/__pycache__/
+*\__pycache__\*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 __pycache__

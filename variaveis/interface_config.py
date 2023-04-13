@@ -46,7 +46,9 @@ ping_lampada2 = '192.168.8.115'
 ping_fita_led = '192.168.8.118'
 
 ping_controle = '192.168.8.111'
+
 ping_robo_aspirador = '192.168.8.117'
+ping_lavaeseca = '192.168.8.120'
 
 ping_not_5g = '192.168.8.101'
 ping_not = '192.168.8.102'

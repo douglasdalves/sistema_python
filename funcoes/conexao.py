@@ -28,12 +28,7 @@ def ping_seanet():
 
 def ping_smarthome():
     os.system('cls') or None
-    func_cabecalho('Roteador - C60')
-    requesicao_tplink = requests.get("http://192.168.8.1/")
-    print(f'\nHTTP Status do Roteador: {requesicao_tplink}','\n')
-    subprocess.run(["ping", "-n", "4", ping_roteador])
     r = dict()
-    r[subprocess.run(["ping", "-n", "4", ping_tv])] = func_cabecalho('Smart TV - LG')
     func_cabecalho('Echo Dot - Alexa')
     requisicao_echo3 = requests.get("https://alexa.amazon.com.br/spa/index.html?#settings/device/G0911W110342050A")
     requisicao_echo4 = requests.get("https://alexa.amazon.com.br/spa/index.html?#settings/device/G091AA1220270BJ6")
@@ -48,6 +43,7 @@ def ping_smarthome():
     r[subprocess.run(["ping", "-n", "4", ping_sonoff1])] = func_cabecalho("Interupator Sonoff")
     r[subprocess.run(["ping", "-n", "4", ping_sonoff2])] = func_cabecalho("Interupator Sonoff 2")
     r[subprocess.run(["ping", "-n", "4", ping_robo_aspirador])] = func_cabecalho("Robo Aspirador")
+    r[subprocess.run(["ping", "-n", "4", ping_lavaeseca])] = func_cabecalho("Samsung Lava e Seca")
     dados_pc()
 
 
@@ -77,6 +73,11 @@ def ping_desktop():
 
 def ping_equipamentos():
     os.system('cls') or None
+    func_cabecalho('Roteador - C5')
+    requesicao_tplink = requests.get("http://192.168.8.1/")
+    print(f'\nHTTP Status do Roteador: {requesicao_tplink}','\n')
+    subprocess.run(["ping", "-n", "4", ping_roteador])
     r = dict()
+    r[subprocess.run(["ping", "-n", "4", ping_tv])] = func_cabecalho('Smart TV - LG')
     r[subprocess.run(["ping", "-n", "4", ping_kindle])] = func_cabecalho('Amazom Kindle')
     dados_pc()
