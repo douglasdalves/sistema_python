@@ -50,7 +50,7 @@ def ping_smarthome():
 def ping_not():
     os.system('cls') or None
     r = dict()
-    r[subprocess.run(["ping", "-n", "4", ping_not])] = func_cabecalho('Notebook Acer-V5')
+    r[subprocess.run(["ping", "-n", "4", ping_tab_s7])] = func_cabecalho('Galaxy Tab S7')
     r[subprocess.run(["ping", "-n", "4", ping_not_5g])] = func_cabecalho('Notebook Acer-V5-5G')
     r[subprocess.run(["ping", "-n", "4", ping_dell])] = func_cabecalho('Notebook Working')
     dados_pc()
