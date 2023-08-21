@@ -30,33 +30,42 @@ myfile_bkp_pip = r'C:/scripts_logs/info_pacotes/backupPIP_python.txt'
 ping_seanet = '186.251.248.1'
 ping_roteador = '192.168.8.1'
 
-ping_tv = '192.168.8.103'
-ping_kindle = '192.168.8.119'
+ping_tv = '192.168.8.104'
+ping_kindle = '192.168.8.105'
 
 ping_alexa = '192.168.8.107'
-ping_dot4 = '192.168.8.114'
-
-ping_plug1 = '192.168.8.108'
-ping_plug2 = '192.168.8.109'
-ping_sonoff1 = '192.168.8.112'
-ping_sonoff2 = '192.168.8.116'
+ping_dot4 = '192.168.8.108'
+ping_echo = '192.168.8.109'
 
 ping_lampada = '192.168.8.110'
-ping_lampada2 = '192.168.8.115'
-ping_fita_led = '192.168.8.118'
+ping_lampada2 = '192.168.8.111'
+ping_plafon = '192.168.8.112'
+ping_fita_led = '192.168.8.113'
 
-ping_controle = '192.168.8.111'
+ping_interruptor_cozinha = '192.168.8.115'
+ping_interruptor_sala = '192.168.8.116'
+ping_interruptor_corredor = '192.168.8.117'
+ping_interruptor_suite = '192.168.8.118'
+ping_interruptor_banheiro = '192.168.8.119'
 
-ping_robo_aspirador = '192.168.8.117'
+ping_controle = '192.168.8.126'
+ping_plug1 = '192.168.8.127'
+ping_plug2 = '192.168.8.128'
+ping_sonoff1 = '192.168.8.129'
+ping_sonoff2 = '192.168.8.130'
+
+
 ping_lavaeseca = '192.168.8.120'
+ping_robo_aspirador = '192.168.8.121'
+ping_ar9 = '192.168.8.122'
+ping_ar18 = '192.168.8.123'
+ping_fechadura = '192.168.8.124'
 
-ping_not_5g = '192.168.8.101'
-ping_not = '192.168.8.102'
 ping_pc = '192.168.8.106'
-ping_dell = '192.168.8.113'
+ping_dell = '192.168.8.185'
 
-ping_mi9 = '192.168.8.104'
-ping_mi8 = '192.168.8.105'
+ping_mi9 = '192.168.8.103'
+ping_mi8 = '192.168.8.102'
 ping_tab_s7 = '192.168.8.101'
 
 
