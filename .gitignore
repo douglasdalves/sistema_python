@@ -11,6 +11,7 @@ __pycache__
 *.py[cod]
 *$py.class
 *.pyc
+C:\sistema_python\*\__pycache__\*.pyc
 
 # Nao finalizado
 janela_system.py
