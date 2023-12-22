@@ -44,9 +44,9 @@ def abrir_wsl():
             os.system('cls') or None
             print('{}'.format(op2), 'Start WSL2')
             print('\n')
-            os.system('wsl ~ --distribution Ubuntu --user root')
+            os.system('wsl ~ --distribution Ubuntu-20.04 --user root')
             sleep(2)
-            os.system('Start Ubuntu')
+            os.system('Start Ubuntu-20.04')
             #os.system('exit')
             print('\n', 'Status do Subsistema')
             wsl_status()

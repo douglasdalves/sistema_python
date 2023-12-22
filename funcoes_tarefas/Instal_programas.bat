@@ -60,6 +60,14 @@ echo -----------------------------------------
 echo.
 choco install -y python
 echo.
+choco install terraform
+echo.
+terraform -help
+echo.
+touch ~/.bashrc
+echo.
+terraform -install-autocomplete
+echo.
 echo -----------------------------------------
 echo          Processo finalizado
 echo -----------------------------------------
