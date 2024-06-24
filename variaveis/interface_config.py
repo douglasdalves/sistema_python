@@ -9,6 +9,27 @@ import getpass
 import pyautogui
 from time import sleep
 from tqdm import tqdm
+import logging
+
+#------------------------------------------------
+#
+# Configuração básica do logger
+log_file = 'C:/scripts_logs/log_aplication.txt'
+
+
+
+logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=log_file, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=log_file, level=logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=log_file, level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Mensagens de diferentes níveis
+logging.info('Esta é uma mensagem informativa.')
+logging.debug('Esta é uma mensagem de debug.')
+logging.warning('Esta é uma mensagem de aviso.')
+logging.error('Esta é uma mensagem de erro.')
+logging.critical('Esta é uma mensagem crítica.')
+
 
 #------------------------------------------------
 # variaveis
@@ -23,50 +44,6 @@ LOG_FILENAME = datetime.now().strftime('Print_aplic_%d_%m_%Y_%H_%M_%S.png')
 
 myfile_bkp_pip = r'C:/scripts_logs/info_pacotes/backupPIP_python.txt'
 
-
-#--------------------------------------------
-# variaveis das funcoes conexao
-
-ping_seanet = '186.251.248.1'
-ping_roteador = '192.168.8.1'
-
-ping_tv = '192.168.8.104'
-ping_kindle = '192.168.8.105'
-
-ping_alexa = '192.168.8.107'
-ping_dot4 = '192.168.8.108'
-ping_echo = '192.168.8.109'
-
-ping_lampada = '192.168.8.110'
-ping_lampada2 = '192.168.8.111'
-ping_plafon = '192.168.8.112'
-ping_fita_led = '192.168.8.113'
-
-ping_interruptor_cozinha = '192.168.8.115'
-ping_interruptor_sala = '192.168.8.116'
-ping_interruptor_corredor = '192.168.8.117'
-ping_interruptor_suite = '192.168.8.118'
-ping_interruptor_banheiro = '192.168.8.119'
-
-ping_controle = '192.168.8.126'
-ping_plug1 = '192.168.8.127'
-ping_plug2 = '192.168.8.128'
-ping_sonoff1 = '192.168.8.129'
-ping_sonoff2 = '192.168.8.130'
-
-
-ping_lavaeseca = '192.168.8.120'
-ping_robo_aspirador = '192.168.8.121'
-ping_ar9 = '192.168.8.122'
-ping_ar18 = '192.168.8.123'
-ping_fechadura = '192.168.8.124'
-
-ping_pc = '192.168.8.106'
-ping_dell = '192.168.8.185'
-
-ping_mi9 = '192.168.8.103'
-ping_mi8 = '192.168.8.102'
-ping_tab_s7 = '192.168.8.101'
 
 
 #--------------------------------------------
@@ -111,17 +88,10 @@ def dados_pc():
     print(f'{text_user} {user}', '\n')
 
 
-#-----------------------------------------------------
+#--------------------------------------------
+# variaveis das funcoes conexao
 
-# anotacao da config de data e hora
-
-#---%d - O dia do mês representado por um número decimal (de 01 a 31)
-#---%m - O mês representado por um número decimal (de 01 a 12)
-#---%Y - O ano representado por um número decimal incluindo o século
-#---%H - A hora representada por um número decimal usando um relógio de 24 horas (de 00 a 23)
-#---%M - O minuto representado por um número decimal (de 00 a 59)
-
-
+ping_seanet = '186.251.248.1'
 
 #-----------------------------------------------------
 # Dados dos Menus (opcao)

@@ -14,13 +14,13 @@ from termcolor import colored
 from funcoes import *
 from lib import *
 
+
 #------------------------------------------------
-#
 
 myfile_cp_logs = r'C:/scripts_logs'
 
 # Dados menu em lista
-mlist = ['Testes de Conexao', 'Agilizando Tarefas', 'Test de Rede', 'Testes Automatizados', 'Tarefas em WSL','Web system', 'Captura de Tela', 'Sair']
+mlist = ['Teste de Conexao ao Provedor', 'Agilizando Tarefas', 'Test de Rede', 'Testes Automatizados', 'Tarefas em WSL','Web system', 'Captura de Tela', 'Sair']
 
 #------------------------------------------------
 #Codigo do menu principal
@@ -59,4 +59,3 @@ while True:
     else:
         leia_opcao()
         sleep(2)
-
