@@ -1,10 +1,7 @@
 
 #------------------------------------------------
 
-import os
 from variaveis.interface_config import *
-import subprocess
-from termcolor import colored
 
 #------------------------------------------------
 

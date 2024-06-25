@@ -1,12 +1,11 @@
-import os
-import subprocess
-from termcolor import colored
+
+#------------------------------------------------
+
 from variaveis.interface_config import *
 
+#------------------------------------------------
 
-#--------------------------------------------
-
-myfile_pacote = r'C:/sistema_python/automacao_sh/altera_pacote.sh'
+myfile_pacote = Path("C:/sistema_python/automacao_sh/altera_pacote.sh")
 
 # configuracoes do menu
 

@@ -1,17 +1,19 @@
-import os
-from termcolor import colored
-import sys
-import subprocess
+
+#------------------------------------------------
+
+from variaveis.interface_config import *
+
+#------------------------------------------------
 
 
-def linha(tam = 42):
+def linha_devops(tam = 42):
     return '-' * tam
 
-def cabecalho (txt):
+def cabecalho_devops (txt):
     print('\n')
-    print(linha())
+    print(linha_devops())
     print(txt.center(42))
-    print(linha())
+    print(linha_devops())
     print('\n')
 
 #------------------------------------------------
@@ -23,6 +25,13 @@ f3 = ('Permite ver os containers.')
 f4 = ('Permite ver as images em docker.')
 f5 = ('Permite ver as Wsl na maquina')
 
+f6 = ('Dados do AWS configure')
+f7 = ('Dados da versão do CLI')
+f8 = ('Dados do configure - profile')
+f9 = ('Dados do config do aws cli')
+f10 = ('setx AWS_PROFILE nomeProf')
+
+#------------------------------------------------
 
 def func_devops():
     aplicar = 0
@@ -38,12 +47,12 @@ def func_devops():
         print('\n')
         aplicar = str(input('Digite uma opcao? '))
         if aplicar == '1':
-            cabecalho('Tudo bem volte quando quiser')
+            cabecalho_devops('Tudo bem volte quando quiser')
             break
         elif aplicar == '2':
             dev_wsl()
             dev_docker()
-            dev_vagrant()
+            #dev_vagrant()
         elif aplicar == '3':
             dev_wsl()
         elif aplicar == '4':
@@ -51,25 +60,25 @@ def func_devops():
         elif aplicar == '5':
             aws_cli()
         elif aplicar == '6':
-            dev_vagrant()
+            print('funcao desativada')
         else:
             aplicar == '7'
             os.system('code .')
 
+#------------------------------------------------
 
+def dev_wsl():
+    cabecalho_devops('Funcoes em WSL')
 
-def dev_vagrant():
-    cabecalho('Funcoes em Vagrant')
-
-    print(colored('{}'.format(f1), 'blue', attrs=['bold']), '\n')
-    os.system('vagrant global-status')
+    print(colored('{}'.format(f5), 'blue', attrs=['bold']), '\n')
+    #os.system('wsl -l -v')
+    os.system('wsl ~ -e sh -c "ls -l"')
     print('\n')
-    print(colored('{}'.format(f2), 'blue', attrs=['bold']), '\n')
-    os.system('vagrant box list')
 
+#------------------------------------------------
 
 def dev_docker():
-    cabecalho('Funcoes em Docker')
+    cabecalho_devops('Funcoes em Docker')
 
     print(colored('{}'.format(f3), 'blue', attrs=['bold']), '\n')
     os.system('docker ps -a')
@@ -78,21 +87,10 @@ def dev_docker():
     os.system('docker images')
     print('\n')
 
-def dev_wsl():
-    cabecalho('Funcoes em WSL')
-
-    print(colored('{}'.format(f5), 'blue', attrs=['bold']), '\n')
-    os.system('wsl -l -v')
-    print('\n')
-
-f6 = ('Dados do AWS configure')
-f7 = ('Dados da versão do CLI')
-f8 = ('Dados do configure - profile')
-f9 = ('Dados do config do aws cli')
-f10 = ('setx AWS_PROFILE nomeProf')
+#------------------------------------------------
 
 def aws_cli():
-    cabecalho('Funcoes do AWS cli')
+    cabecalho_devops('Funcoes do AWS cli')
 
     print(colored('{}'.format(f6), 'blue', attrs=['bold']), '\n')
     os.system('cat ~/.aws/credentials')
@@ -109,3 +107,13 @@ def aws_cli():
     print(colored('{}'.format(f10), 'blue', attrs=['bold']), '\n')
     os.system('aws configure list-profiles')
     print('\n')
+
+
+# def dev_vagrant():
+#     cabecalho_devops('Funcoes em Vagrant')
+
+#     print(colored('{}'.format(f1), 'blue', attrs=['bold']), '\n')
+#     os.system('vagrant global-status')
+#     print('\n')
+#     print(colored('{}'.format(f2), 'blue', attrs=['bold']), '\n')
+#     os.system('vagrant box list')
