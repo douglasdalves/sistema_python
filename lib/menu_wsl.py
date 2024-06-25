@@ -3,17 +3,15 @@
 
 from variaveis.interface_config import *
 from automacao_sh import *
-from time import sleep
 
 #https://docs.microsoft.com/pt-br/windows/wsl/filesystems#:~:text=Execute%20bin%C3%A1rios%20do%20Linux%20no,.exe%20).&text=Bin%C3%A1rios%20invocados%20desta%20maneira%3A,como%20usu%C3%A1rio%20padr%C3%A3o%20do%20WSL.
 
 #------------------------------------------------
 #Linhas de personalizacao
 
-myfile_docker = r'C:/sistema_python/automacao_sh/wsl_start_docker.sh'
-myfile_stop = r'C:/sistema_python/automacao_sh/wsl_stop_docker.sh'
-
-myfile_docker1 = r'C:/sistema_python/automacao_sh'
+myfile_docker = Path("C:/sistema_python/automacao_sh/wsl_start_docker.sh")
+myfile_stop = Path("C:/sistema_python/automacao_sh/wsl_stop_docker.sh")
+myfile_docker1 = Path("C:/sistema_python/automacao_sh")
 
 #------------------------------------------------
 # funções

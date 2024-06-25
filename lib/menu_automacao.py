@@ -3,9 +3,6 @@
 
 from variaveis.interface_config import *
 from funcoes.info_hardware import *
-from time import sleep
-import os
-
 
 #------------------------------------------------
 #Linhas de personalizacao
@@ -17,8 +14,8 @@ t_menu2 = 'Informacao do Hardware'
 t_menu3 = 'Rotas do Windows'
 t_menu4 = 'Processos Windows'
 
-myfile_cp_logs = r'C:/scripts_logs'
-myfile_processos = r'C:/sistema_python/funcoes_tarefas/processos_wind.bat'
+myfile_cp_logs = Path("C:/scripts_logs")
+myfile_processos = Path("C:/sistema_python/funcoes_tarefas/processos_wind.bat")
 
 #------------------------------------------------
 #Codigo do menu 4
