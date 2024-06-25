@@ -2,7 +2,6 @@
 #Importacao de dados
 
 from variaveis.interface_config import *
-#from funcoes.infos_windows import *
 from funcoes.info_hardware import *
 from time import sleep
 import os
