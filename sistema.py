@@ -6,18 +6,14 @@ from lib.menu_tarefas import abrir_taref
 from lib.menu_avancado import abrir_avanc
 from lib.menu_automacao import abrir_autom
 from lib.menu_wsl import abrir_wsl
-
 from variaveis.interface_config import *
-from time import sleep
 
-from termcolor import colored
 from funcoes import *
 from lib import *
 
 
 #------------------------------------------------
 
-myfile_cp_logs = r'C:/scripts_logs'
 
 # Dados menu em lista
 mlist = ['Teste de Conexao ao Provedor', 'Agilizando Tarefas', 'Test de Rede', 'Testes Automatizados', 'Tarefas em WSL','Web system', 'Captura de Tela', 'Sair']

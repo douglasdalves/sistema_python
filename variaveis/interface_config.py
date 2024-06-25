@@ -1,21 +1,22 @@
-import sys
 import os
-import subprocess
 from termcolor import colored
 from datetime import datetime
 import platform
 import getpass
 
+import subprocess
+
 import pyautogui
 from time import sleep
 from tqdm import tqdm
 import logging
+from pathlib import Path
 
 #------------------------------------------------
 #
 # Configuração básica do logger
-log_file = 'C:/scripts_logs/log_aplication.txt'
 
+log_file = Path("C:/scripts_logs/log-app/log_aplication.txt")
 
 
 logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -36,15 +37,12 @@ logging.critical('Esta é uma mensagem crítica.')
 
 espaco = print('\n')
 
-myfile_saindo = r'C:/sistema_python/funcoes/saindo_sistema.py'
+myfile_saindo = Path("C:/sistema_python/funcoes/saindo_sistema.py")
+myfile_captura = Path("C:/scripts_logs/captura/print_sistema.png")
+myfile_local_captura = Path("C:/scripts_logs/captura")
+myfile_bkp_pip = Path("C:/scripts_logs/info_pacotes/backupPIP_python.txt")
 
-myfile_captura = r'C:/scripts_logs/captura/print_sistema.png'
-myfile_local_captura = r'C:/scripts_logs/captura'
 LOG_FILENAME = datetime.now().strftime('Print_aplic_%d_%m_%Y_%H_%M_%S.png')
-
-myfile_bkp_pip = r'C:/scripts_logs/info_pacotes/backupPIP_python.txt'
-
-
 
 #--------------------------------------------
 #('Configuracoes do menu funcoes')
