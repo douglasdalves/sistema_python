@@ -1,15 +1,13 @@
 #------------------------------------------------
 #Importacao de dados
 
-#from comp_git.git_test import func_git_test
 from funcoes_tarefas.func_devops import func_devops
 from variaveis.interface_config import *
 from comp_git.git_test import *
 
-
 #------------------------------------------------
 
-myfile_programas = r'C:/sistema_python/funcoes_tarefas/instal_programas.bat'
+myfile_programas = Path("C:/sistema_python/funcoes_tarefas/instal_programas.bat")
 
 # Dados menu
 t_menu = 'Pacotes do Python'
@@ -17,8 +15,6 @@ t_menu1 = 'GitHub'
 t_menu2 = 'DevOps'
 t_menu3 = 'Variavel Ambiente'
 t_menu4 = 'Install Programas'
-
-
 
 #------------------------------------------------
 #Codigo do menu 2
