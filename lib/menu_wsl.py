@@ -2,16 +2,16 @@
 #Importacao de dados
 
 from variaveis.interface_config import *
-from automacao_sh import *
+
 
 #https://docs.microsoft.com/pt-br/windows/wsl/filesystems#:~:text=Execute%20bin%C3%A1rios%20do%20Linux%20no,.exe%20).&text=Bin%C3%A1rios%20invocados%20desta%20maneira%3A,como%20usu%C3%A1rio%20padr%C3%A3o%20do%20WSL.
 
 #------------------------------------------------
 #Linhas de personalizacao
 
-myfile_docker = Path("C:/sistema_python/automacao_sh/wsl_start_docker.sh")
-myfile_stop = Path("C:/sistema_python/automacao_sh/wsl_stop_docker.sh")
-myfile_docker1 = Path("C:/sistema_python/automacao_sh")
+myfile_docker = r'C:/sistema_python/automacao_sh/wsl_start_docker.sh'
+myfile_stop = r'C:/sistema_python/automacao_sh/wsl_stop_docker.sh'
+myfile_pafina = r'C:/sistema_python/sistema.sh'
 
 #------------------------------------------------
 # funções
@@ -21,55 +21,48 @@ def wsl_status():
     subprocess.run(["wsl", "-l", "-v"])
     print('\n')
 
-# Dados menu
-t_menu = 'Status da WSL'
-t_menu1 = 'Iniciando o WSL2'
-t_menu2 = 'Stop do WSL2'
-t_menu3 = 'Start docker'
-t_menu4 = 'Stop docker'
+
+# Dados menu em lista
+mlist = [
+    'Status do Subsistema wsl2',
+    'Stop do Subsistema wsl2',
+    'Start docker',
+    'Stop docker', 
+    'Captura de Tela', 
+    'Menu home'
+]
 
 #------------------------------------------------
 #Codigo do menu 6
 
 def abrir_wsl():
     while True:
-        resposta = menu_secund([t_menu,t_menu1,t_menu2,t_menu3,t_menu4,opcao_captura, opcao_retorno])
+        resposta = menu(mlist, 'Menu de Funcoes WSL')
+        os.system('cls') or None
+
         if resposta == 1:
-            os.system('cls') or None
-            print('{}'.format(op1), 'Status do WSL2')
             wsl_status()
         elif resposta == 2:
-            os.system('cls') or None
-            print('{}'.format(op2), 'Start WSL2')
-            print('\n')
-            os.system('wsl ~ --distribution Ubuntu-20.04 --user root')
-            sleep(2)
-            os.system('Start Ubuntu-20.04')
-            #os.system('exit')
-            print('\n', 'Status do Subsistema')
-            wsl_status()
-        elif resposta == 3:
-            print('{}'.format(op3), 'Stop do Subsistema WS2')
+            print('Stop do Subsistema WS2')
             print('\n','Stop da WSL2','\n')
             os.system('wsl --shutdown && wsl -l -v')
-            #sleep(2)
-            #wsl_status()
-        elif resposta == 4:
-            print('{}'.format(op4), 'Start Docker')
+        elif resposta == 3:
+            print('Start Docker')
             subprocess.run(myfile_docker, shell=True)
             os.system('wsl docker ps')
-        elif resposta == 5:
-            print('{}'.format(op5), 'Stop Docker')
-            #os.chdir(myfile_docker1)
+            print('\n')
+        elif resposta == 4:
+            print('Stop Docker')
             os.system('wsl docker ps')
             subprocess.run(myfile_stop, shell=True)
             os.system('wsl docker ps')
-        elif resposta == 6:
-            print('{}'.format(op6), 'Captura de Tela')
+        elif resposta == 5:
             gerar_print()
-        elif resposta == 7:
-            print('{}'.format(op7), 'Retorno do Menu')
+        elif resposta == 6:
             frase_retorno()
         else:
-            leia_opcao()
-            sleep(2)
+            print("Opção inválida. Tente novamente.")
+            time.sleep(2)
+
+if __name__ == "__main__":
+    abrir_wsl()

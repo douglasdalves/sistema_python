@@ -31,6 +31,8 @@ f8 = ('Dados do configure - profile')
 f9 = ('Dados do config do aws cli')
 f10 = ('setx AWS_PROFILE nomeProf')
 
+f11 = ('Permite ver o status do kind')
+
 #------------------------------------------------
 
 def func_devops():
@@ -42,7 +44,7 @@ def func_devops():
         [3] Dados WSL
         [4] Dados Docker
         [5] Dados AWS cli
-        [6] Dados Vagrant
+        [6] Dados do Kubernetes
         [7] Abrir o vsCode''')
         print('\n')
         aplicar = str(input('Digite uma opcao? '))
@@ -60,7 +62,7 @@ def func_devops():
         elif aplicar == '5':
             aws_cli()
         elif aplicar == '6':
-            print('funcao desativada')
+            dev_kind()
         else:
             aplicar == '7'
             os.system('code .')
@@ -71,8 +73,7 @@ def dev_wsl():
     cabecalho_devops('Funcoes em WSL')
 
     print(colored('{}'.format(f5), 'blue', attrs=['bold']), '\n')
-    #os.system('wsl -l -v')
-    os.system('wsl ~ -e sh -c "ls -l"')
+    os.system('wsl -l -v')
     print('\n')
 
 #------------------------------------------------
@@ -86,6 +87,15 @@ def dev_docker():
     print(colored('{}'.format(f4), 'blue', attrs=['bold']), '\n')
     os.system('docker images')
     print('\n')
+
+
+def dev_kind():
+    cabecalho_devops('Funcoes em Docker')
+
+    print(colored('{}'.format(f11), 'blue', attrs=['bold']), '\n')
+    os.system('kind get clusters')
+    print('\n')
+
 
 #------------------------------------------------
 

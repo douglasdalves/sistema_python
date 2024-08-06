@@ -1,16 +1,19 @@
-import os
 from termcolor import colored
 from datetime import datetime
-import platform
-import getpass
-
-import subprocess
-
-import pyautogui
 from time import sleep
 from tqdm import tqdm
-import logging
 from pathlib import Path
+
+
+import platform
+import getpass
+import pyautogui
+import logging
+import os
+import subprocess
+import time
+import curses
+
 
 #------------------------------------------------
 #
@@ -37,7 +40,6 @@ logging.critical('Esta é uma mensagem crítica.')
 
 espaco = print('\n')
 
-myfile_saindo = Path("C:/sistema_python/funcoes/saindo_sistema.py")
 myfile_captura = Path("C:/scripts_logs/captura/print_sistema.png")
 myfile_local_captura = Path("C:/scripts_logs/captura")
 myfile_bkp_pip = Path("C:/scripts_logs/info_pacotes/backupPIP_python.txt")
@@ -91,45 +93,6 @@ def dados_pc():
 
 ping_seanet = '186.251.248.1'
 
-#-----------------------------------------------------
-# Dados dos Menus (opcao)
-
-op1 = 'Opcao 1 - '
-op2 = 'Opcao 2 - '
-op3 = 'Opcao 3 - '
-op4 = 'Opcao 4 - '
-op5 = 'Opcao 5 - '
-op6 = 'Opcao 6 - '
-op7 = 'Opcao 7 - '
-op8 = 'Opcao 8 - '
-op9 = 'Opcao 8 - '
-op10 = 'Opcao 8 - '
-
-#--------------------------------------------
-## configuracoes das mensagens
-
-def leiaInt(msg):
-    """
-    -> Apresenta as mensagens de erro ao usar o menu incorretamente
-    : Le a entrada
-    : valida a entrada
-    : Retorna a mensagem adequada
-    : Trabalha com a cor vermelha
-    """
-    while True:
-        try:
-            n = int(input(msg))
-        except (ValueError, TypeError):
-            print(colored('ERRO: Por favor, digite um numero inteiro valido.','red'))
-            continue
-        except (KeyboardInterrupt):
-            print(colored('Usuario preferiu não digitar esse numero.','red'))
-            return 0
-        else:
-            return n
-
-def leia_opcao():
-    print(colored('ERRO! Digite uma opção valida!','magenta'))
 
 #--------------------------------------------
 ## configuracoes das opcoes
@@ -157,10 +120,9 @@ def gerar_print():
 
 #---# ('Retornando para o menu principal')
 
-#frase_retorno = 'Retornando para o menu principal'
 fra1 = colored('Retornando para o menu principal', 'yellow', attrs=['bold'])
 
-def retorno (txt):
+def retorno(txt):
     print(linha())
     print(txt.center(53))
     print(linha())
@@ -172,8 +134,7 @@ def frase_retorno():
     os.system('cls') or None
     retorno('{}'.format(fra1))
     exec(open("sistema.py").read())
-    
-    
+
 
 #---# funcao sair
 def funcao_sair():
@@ -195,52 +156,40 @@ def funcao_sair():
 #('Configuracoes do menu inicial')
 
 
-#print(colored(txt.center(42), 'red', attrs=['bold']))
-
-def linha(tam = 42): ## usado por outros menus
+# Função para criar uma linha de separação
+def linha(tam=42):
     return '-' * tam
 
-def cabecalho_sup (txt):
+# Função para exibir o cabeçalho do menu
+def cabecalho_sup(txt):
     print(linha())
-    print(colored(txt.center(42),'cyan',attrs=['bold']))
+    print(colored(txt.center(42), 'cyan', attrs=['bold']))
     print(linha())
 
-def cabecalho_inf (txt):
+# Função para exibir o cabeçalho inferior do menu
+def cabecalho_inf(txt):
     print(linha())
-    print(colored(txt.center(42),'green'))
+    print(colored(txt.center(42), 'green'))
 
-def menu(lista):
-    cabecalho_sup('MENU PRINCIPAL')
-    c = 1
-    for item in lista:
-        print(f'{c} - {item}')
-        c += 1
-    cabecalho_inf('Escolha uma Opção')
-    print(linha())
-    opc = leiaInt("\nSua Opção: ")
-    return opc
 
-#cabecalho_sup(colored('MENU PRINCIPAL','cyan',attrs=['bold']))
-#cabecalho_sup('MENU PRINCIPAL')
+# Função para exibir o menu e capturar a escolha do usuário
+def menu(options, title):
+    cabecalho_sup(title)
+    for i, option in enumerate(options, 1):
+        print(f"{i}. {option}")
+    cabecalho_inf('Escolha uma opção:')
+    while True:
+        try:
+            choice = int(input())
+            if 1 <= choice <= len(options):
+                return choice
+            else:
+                print(colored('Opção inválida. Tente novamente.', 'red'))
+        except ValueError:
+            print(colored('ERRO: Por favor, digite um número inteiro válido.', 'red'))
 
 
 #--------------------------------------------
-#('Configuracoes dos menus secudarios')
 
-def cabeçalho (txt):
-    print('-' * 42)
-    print(colored(txt.center(42),'magenta'))
-    print('-' * 42)
-
-def menu_secund(lista):
-    cabeçalho('Testes secundários')
-    c = 1
-    for item in lista:
-        print(f'{c} - {item}')
-        c += 1
-    print('-' * 42)
-    opc = leiaInt("\nSua Opção: ")
-    return opc
-
-
-#--------------------------------------------
+def leia_opcao():
+    print(colored('ERRO! Digite uma opção valida!','magenta'))
